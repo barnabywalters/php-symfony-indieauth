@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a10" title="BarnabyWalters Helpers Docs">
+  <file path="Listener/IndieauthListener.php" hash="012d7c67e1dced4342869df19f254942" package="Default">
+    <namespace-alias name="Request">Symfony\Component\HttpFoundation\Request</namespace-alias>
+    <namespace-alias name="AbstractAuthenticationListener">Symfony\Component\Security\Http\Firewall\AbstractAuthenticationListener</namespace-alias>
+    <namespace-alias name="IndieauthToken">BarnabyWalters\Indieauth\Token\IndieauthToken</namespace-alias>
+    <class final="false" abstract="false" namespace="BarnabyWalters\Indieauth\Listener" line="12" package="Default">
+      <extends>\Symfony\Component\Security\Http\Firewall\AbstractAuthenticationListener</extends>
+      <name>IndieauthListener</name>
+      <full_name>\BarnabyWalters\Indieauth\Listener\IndieauthListener</full_name>
+      <docblock line="9">
+        <description><![CDATA[]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="9" name="todo" description="add a check for ?token somewhere, not sure where is the most useful place though"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BarnabyWalters\Indieauth\Listener" line="14" package="Default">
+        <name>requiresAuthentication</name>
+        <full_name>requiresAuthentication</full_name>
+        <argument line="14">
+          <name>$request</name>
+          <default><![CDATA[]]></default>
+          <type>\Symfony\Component\HttpFoundation\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BarnabyWalters\Indieauth\Listener" line="19" package="Default">
+        <name>attemptAuthentication</name>
+        <full_name>attemptAuthentication</full_name>
+        <argument line="19">
+          <name>$request</name>
+          <default><![CDATA[]]></default>
+          <type>\Symfony\Component\HttpFoundation\Request</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Listener/IndieauthListener.php</error>
+      <critical line="9" code="50005">No short description for class \BarnabyWalters\Indieauth\Listener\IndieauthListener</critical>
+      <error line="14" code="50010">No DocBlock was found for method requiresAuthentication()</error>
+      <error line="19" code="50010">No DocBlock was found for method attemptAuthentication()</error>
+    </parse_markers>
+  </file>
+  <file path="Provider/IndieauthProvider.php" hash="f51cb111ca7ae942eeec1332e72f18ea" package="Default">
+    <namespace-alias name="AuthenticationProviderInterface">Symfony\Component\Security\Core\Authentication\Provider\AuthenticationProviderInterface</namespace-alias>
+    <namespace-alias name="UserProviderInterface">Symfony\Component\Security\Core\User\UserProviderInterface</namespace-alias>
+    <namespace-alias name="AuthenticationException">Symfony\Component\Security\Core\Exception\AuthenticationException</namespace-alias>
+    <namespace-alias name="TokenInterface">Symfony\Component\Security\Core\Authentication\Token\TokenInterface</namespace-alias>
+    <namespace-alias name="IndieauthToken">BarnabyWalters\Indieauth\Token\IndieauthToken</namespace-alias>
+    <namespace-alias name="Client">Guzzle\Http\Client</namespace-alias>
+    <class final="false" abstract="false" namespace="BarnabyWalters\Indieauth\Provider" line="12" package="Default">
+      <extends/>
+      <implements>\Symfony\Component\Security\Core\Authentication\Provider\AuthenticationProviderInterface</implements>
+      <name>IndieauthProvider</name>
+      <full_name>\BarnabyWalters\Indieauth\Provider\IndieauthProvider</full_name>
+      <property final="false" static="false" visibility="private" line="14" namespace="BarnabyWalters\Indieauth\Provider" package="Default">
+        <name>$userProvider</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="15" namespace="BarnabyWalters\Indieauth\Provider" package="Default">
+        <name>$cacheDir</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="16" namespace="BarnabyWalters\Indieauth\Provider" package="Default">
+        <name>$logger</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="26" namespace="BarnabyWalters\Indieauth\Provider" package="Default">
+        <name>$authServer</name>
+        <default><![CDATA['https://indieauth.com']]></default>
+        <docblock line="18">
+          <description><![CDATA[Indieauth Server]]></description>
+          <long-description><![CDATA[<p>The indieauth server to authenticate the token with. Defaults to
+'https://indieauth.com'</p>]]></long-description>
+          <tag line="18" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BarnabyWalters\Indieauth\Provider" line="33" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="28">
+          <description><![CDATA[Constructor]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="28" name="param" description="" type="\Symfony\Component\Security\Core\User\UserProviderInterface" variable="$userProvider">
+            <type by_reference="false">\Symfony\Component\Security\Core\User\UserProviderInterface</type>
+          </tag>
+          <tag line="28" name="param" description="" type="string" variable="$cacheDir">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="33">
+          <name>$userProvider</name>
+          <default><![CDATA[]]></default>
+          <type>\Symfony\Component\Security\Core\User\UserProviderInterface</type>
+        </argument>
+        <argument line="33">
+          <name>$cacheDir</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="33">
+          <name>$logger</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BarnabyWalters\Indieauth\Provider" line="46" package="Default">
+        <name>setAuthServer</name>
+        <full_name>setAuthServer</full_name>
+        <docblock line="39">
+          <description><![CDATA[Set Auth Server]]></description>
+          <long-description><![CDATA[<p>Sets the indieauth server to use. $server should be a fully qualified URL,
+e.g. 'https://indieauth.com'.</p>]]></long-description>
+          <tag line="39" name="param" description="" type="string" variable="$server">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="46">
+          <name>$server</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BarnabyWalters\Indieauth\Provider" line="50" package="Default">
+        <name>supports</name>
+        <full_name>supports</full_name>
+        <argument line="50">
+          <name>$token</name>
+          <default><![CDATA[]]></default>
+          <type>\Symfony\Component\Security\Core\Authentication\Token\TokenInterface</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BarnabyWalters\Indieauth\Provider" line="54" package="Default">
+        <name>supportsClass</name>
+        <full_name>supportsClass</full_name>
+        <argument line="54">
+          <name>$class</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BarnabyWalters\Indieauth\Provider" line="68" package="Default">
+        <name>authenticate</name>
+        <full_name>authenticate</full_name>
+        <docblock line="58">
+          <description><![CDATA[Authenticate]]></description>
+          <long-description><![CDATA[<p>Given a token, try to authenticate it against $this->authServer</p>]]></long-description>
+          <tag line="58" name="param" description="" type="\Symfony\Component\Security\Core\Authentication\Token\TokenInterface" variable="$token">
+            <type by_reference="false">\Symfony\Component\Security\Core\Authentication\Token\TokenInterface</type>
+          </tag>
+          <tag line="58" name="return" description="" type="\app\libs\Indieauth\Token\IndieauthToken">
+            <type by_reference="false">\app\libs\Indieauth\Token\IndieauthToken</type>
+          </tag>
+          <tag line="58" name="throws" description="" type="\Symfony\Component\Security\Core\Exception\AuthenticationException">
+            <type by_reference="false">\Symfony\Component\Security\Core\Exception\AuthenticationException</type>
+          </tag>
+          <tag line="58" name="todo" description="for some reason this is being called multiple times, with no credentials on the second time"/>
+        </docblock>
+        <argument line="68">
+          <name>$token</name>
+          <default><![CDATA[]]></default>
+          <type>\Symfony\Component\Security\Core\Authentication\Token\TokenInterface</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Provider/IndieauthProvider.php</error>
+      <error line="12" code="50000">No DocBlock was found for \BarnabyWalters\Indieauth\Provider\IndieauthProvider</error>
+      <error line="14" code="50018">No DocBlock was found for property $userProvider</error>
+      <error line="15" code="50018">No DocBlock was found for property $cacheDir</error>
+      <error line="16" code="50018">No DocBlock was found for property $logger</error>
+      <error line="28" code="50015">Argument $logger is missing from the Docblock of __construct()</error>
+      <error line="50" code="50010">No DocBlock was found for method supports()</error>
+      <error line="54" code="50010">No DocBlock was found for method supportsClass()</error>
+    </parse_markers>
+  </file>
+  <file path="Token/IndieauthToken.php" hash="feaa300f6713cff6b0ac0793c4c7c2ba" package="Default">
+    <namespace-alias name="UsernamePasswordToken">Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken</namespace-alias>
+    <class final="false" abstract="false" namespace="BarnabyWalters\Indieauth\Token" line="15" package="Default">
+      <extends>\Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken</extends>
+      <name>IndieauthToken</name>
+      <full_name>\BarnabyWalters\Indieauth\Token\IndieauthToken</full_name>
+      <docblock line="7">
+        <description><![CDATA[IndieauthToken]]></description>
+        <long-description><![CDATA[<p>This is an extension of AnonymousToken with a constructor which only accepts
+a single parameter, the token to use with the indieauth provider.</p>]]></long-description>
+        <tag line="7" name="author" description="Barnaby Walters http://waterpigs.co.uk &lt;barnaby@waterpigs.co.uk&gt;"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BarnabyWalters\Indieauth\Token" line="21" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="17">
+          <description><![CDATA[Construct]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="17" name="param" description="" type="string" variable="$token">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="21">
+          <name>$token</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="21">
+          <name>$roles</name>
+          <default><![CDATA[array('ROLE_USER')]]></default>
+          <type/>
+        </argument>
+        <argument line="21">
+          <name>$user</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Token/IndieauthToken.php</error>
+      <error line="17" code="50015">Argument $roles is missing from the Docblock of __construct()</error>
+      <error line="17" code="50015">Argument $user is missing from the Docblock of __construct()</error>
+    </parse_markers>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <namespace name="BarnabyWalters" full_name="BarnabyWalters">
+    <namespace name="Indieauth" full_name="BarnabyWalters\Indieauth">
+      <namespace name="Listener" full_name="BarnabyWalters\Indieauth\Listener"/>
+      <namespace name="Provider" full_name="BarnabyWalters\Indieauth\Provider"/>
+      <namespace name="Token" full_name="BarnabyWalters\Indieauth\Token"/>
+    </namespace>
+  </namespace>
+  <marker count="2">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>
