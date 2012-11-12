@@ -2,3 +2,4 @@ vendor/
 nbproject/private
 composer.phar
 tmp/
+docs/
