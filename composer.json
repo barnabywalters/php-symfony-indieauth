@@ -1,0 +1,14 @@
+{
+    "name": "barnabywalters/symfony-indieauth",
+    "type": "library",
+    "description": "Some classes allowing for Indieauth to be used alongside the Symfony Security component",
+    "require": {
+        "symfony/security": "2.1.0",
+        "guzzle/guzzle": "3.0.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "BarnabyWalters": ""
+        }
+    }
+}
