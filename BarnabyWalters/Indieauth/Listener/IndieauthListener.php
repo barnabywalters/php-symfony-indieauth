@@ -25,11 +25,11 @@ class IndieauthListener extends AbstractAuthenticationListener {
 
             $token = new IndieauthToken($request->query->get('token'));
             
-            $this->logger->info('Created IndieauthToken', [
+            $this->logger->info('Created IndieauthToken', array(
                 'credentials' => $token->getCredentials(),
                 'roles' => $token->getRoles(),
                 'isAuthenticated' => $token->isAuthenticated()
-            ]);
+            ));
 
             $authToken = $this->authenticationManager->authenticate($token);
             
