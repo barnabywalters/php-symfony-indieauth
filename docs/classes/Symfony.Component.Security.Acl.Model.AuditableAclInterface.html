@@ -1,0 +1,853 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>BarnabyWalters Helpers Docs » \Symfony\Component\Security\Acl\Model\AuditableAclInterface</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">BarnabyWalters Helpers Docs</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Acme.html"><i class="icon-th"></i> Acme</a></li>
+<li><a href="../namespaces/BarnabyWalters.html"><i class="icon-th"></i> BarnabyWalters</a></li>
+<li><a href="../namespaces/Symfony.html"><i class="icon-th"></i> Symfony</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">1456</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">3</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list"><li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method_deleteClassAce" title="deleteClassAce :: Deletes a class-based ACE"><span class="description">Deletes a class-based ACE</span><pre>deleteClassAce()</pre></a></li>
+<li class="method public inherited"><a href="#method_deleteClassFieldAce" title="deleteClassFieldAce :: Deletes a class-field-based ACE"><span class="description">Deletes a class-field-based ACE</span><pre>deleteClassFieldAce()</pre></a></li>
+<li class="method public inherited"><a href="#method_deleteObjectAce" title="deleteObjectAce :: Deletes an object-based ACE"><span class="description">Deletes an object-based ACE</span><pre>deleteObjectAce()</pre></a></li>
+<li class="method public inherited"><a href="#method_deleteObjectFieldAce" title="deleteObjectFieldAce :: Deletes an object-field-based ACE"><span class="description">Deletes an object-field-based ACE</span><pre>deleteObjectFieldAce()</pre></a></li>
+<li class="method public inherited"><a href="#method_getClassAces" title="getClassAces :: Returns all class-based ACEs associated with this ACL"><span class="description">Returns all class-based ACEs associated with this ACL</span><pre>getClassAces()</pre></a></li>
+<li class="method public inherited"><a href="#method_getClassFieldAces" title="getClassFieldAces :: Returns all class-field-based ACEs associated with this ACL"><span class="description">Returns all class-field-based ACEs associated with this ACL</span><pre>getClassFieldAces()</pre></a></li>
+<li class="method public inherited"><a href="#method_getId" title="getId :: Returns the primary key of this ACL"><span class="description">Returns the primary key of this ACL</span><pre>getId()</pre></a></li>
+<li class="method public inherited"><a href="#method_getObjectAces" title="getObjectAces :: Returns all object-based ACEs associated with this ACL"><span class="description">Returns all object-based ACEs associated with this ACL</span><pre>getObjectAces()</pre></a></li>
+<li class="method public inherited"><a href="#method_getObjectFieldAces" title="getObjectFieldAces :: Returns all object-field-based ACEs associated with this ACL"><span class="description">Returns all object-field-based ACEs associated with this ACL</span><pre>getObjectFieldAces()</pre></a></li>
+<li class="method public inherited"><a href="#method_getObjectIdentity" title="getObjectIdentity :: Returns the object identity associated with this ACL"><span class="description">Returns the object identity associated with this ACL</span><pre>getObjectIdentity()</pre></a></li>
+<li class="method public inherited"><a href="#method_getParentAcl" title="getParentAcl :: Returns the parent ACL, or null if there is none."><span class="description">Returns the parent ACL, or null if there is none.</span><pre>getParentAcl()</pre></a></li>
+<li class="method public inherited"><a href="#method_insertClassAce" title="insertClassAce :: Inserts a class-based ACE"><span class="description">Inserts a class-based ACE</span><pre>insertClassAce()</pre></a></li>
+<li class="method public inherited"><a href="#method_insertClassFieldAce" title="insertClassFieldAce :: Inserts a class-field-based ACE"><span class="description">Inserts a class-field-based ACE</span><pre>insertClassFieldAce()</pre></a></li>
+<li class="method public inherited"><a href="#method_insertObjectAce" title="insertObjectAce :: Inserts an object-based ACE"><span class="description">Inserts an object-based ACE</span><pre>insertObjectAce()</pre></a></li>
+<li class="method public inherited"><a href="#method_insertObjectFieldAce" title="insertObjectFieldAce :: Inserts an object-field-based ACE"><span class="description">Inserts an object-field-based ACE</span><pre>insertObjectFieldAce()</pre></a></li>
+<li class="method public inherited"><a href="#method_isEntriesInheriting" title="isEntriesInheriting :: Whether this ACL is inheriting ACEs from a parent ACL."><span class="description">Whether this ACL is inheriting ACEs from a parent ACL.</span><pre>isEntriesInheriting()</pre></a></li>
+<li class="method public inherited"><a href="#method_isFieldGranted" title="isFieldGranted :: Determines whether field access is granted"><span class="description">Determines whether field access is granted</span><pre>isFieldGranted()</pre></a></li>
+<li class="method public inherited"><a href="#method_isGranted" title="isGranted :: Determines whether access is granted"><span class="description">Determines whether access is granted</span><pre>isGranted()</pre></a></li>
+<li class="method public inherited"><a href="#method_isSidLoaded" title="isSidLoaded :: Whether the ACL has loaded ACEs for all of the passed security identities"><span class="description">Whether the ACL has loaded ACEs for all of the passed security identities</span><pre>isSidLoaded()</pre></a></li>
+<li class="method public inherited"><a href="#method_setEntriesInheriting" title="setEntriesInheriting :: Sets whether entries are inherited"><span class="description">Sets whether entries are inherited</span><pre>setEntriesInheriting()</pre></a></li>
+<li class="method public inherited"><a href="#method_setParentAcl" title="setParentAcl :: Sets the parent ACL"><span class="description">Sets the parent ACL</span><pre>setParentAcl()</pre></a></li>
+<li class="method public inherited"><a href="#method_updateClassAce" title="updateClassAce :: Updates a class-based ACE"><span class="description">Updates a class-based ACE</span><pre>updateClassAce()</pre></a></li>
+<li class="method public "><a href="#method_updateClassAuditing" title="updateClassAuditing :: Updates auditing for class-based ACE"><span class="description">Updates auditing for class-based ACE</span><pre>updateClassAuditing()</pre></a></li>
+<li class="method public inherited"><a href="#method_updateClassFieldAce" title="updateClassFieldAce :: Updates a class-field-based ACE"><span class="description">Updates a class-field-based ACE</span><pre>updateClassFieldAce()</pre></a></li>
+<li class="method public "><a href="#method_updateClassFieldAuditing" title="updateClassFieldAuditing :: Updates auditing for class-field-based ACE"><span class="description">Updates auditing for class-field-based ACE</span><pre>updateClassFieldAuditing()</pre></a></li>
+<li class="method public inherited"><a href="#method_updateObjectAce" title="updateObjectAce :: Updates an object-based ACE"><span class="description">Updates an object-based ACE</span><pre>updateObjectAce()</pre></a></li>
+<li class="method public "><a href="#method_updateObjectAuditing" title="updateObjectAuditing :: Updates auditing for object-based ACE"><span class="description">Updates auditing for object-based ACE</span><pre>updateObjectAuditing()</pre></a></li>
+<li class="method public inherited"><a href="#method_updateObjectFieldAce" title="updateObjectFieldAce :: Updates an object-field-based ACE"><span class="description">Updates an object-field-based ACE</span><pre>updateObjectFieldAce()</pre></a></li>
+<li class="method public "><a href="#method_updateObjectFieldAuditing" title="updateObjectFieldAuditing :: Updates auditing for object-field-based ACE"><span class="description">Updates auditing for object-field-based ACE</span><pre>updateObjectFieldAuditing()</pre></a></li>
+</ul>
+</li></ul>
+</div>
+<div class="span8">
+<a id="\Symfony\Component\Security\Acl\Model\AuditableAclInterface"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.html">Acl</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.Model.html">Model</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Symfony.Component.Security.Acl.Model.AuditableAclInterface.html">AuditableAclInterface</a>
+</li>
+</ul>
+<div class="element interface">
+<p class="short_description">This interface adds auditing capabilities to the ACL.</p>
+<div class="details">
+<div class="long_description"><p>All changes to Access Control Entries must go through this interface. Access
+Control Entries must never be modified directly.</p></div>
+<table class="table table-bordered"><tr>
+<th>author</th>
+<td><a href="mailto:schmittjoh@gmail.com">Johannes M. Schmitt</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_deleteClassAce"></a><div class="element clickable method public method_deleteClassAce" data-toggle="collapse" data-target=".method_deleteClassAce .collapse">
+<h2>Deletes a class-based ACE</h2>
+<pre>deleteClassAce(integer $index) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::deleteClassAce()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+</div></div>
+</div>
+<a id="method_deleteClassFieldAce"></a><div class="element clickable method public method_deleteClassFieldAce" data-toggle="collapse" data-target=".method_deleteClassFieldAce .collapse">
+<h2>Deletes a class-field-based ACE</h2>
+<pre>deleteClassFieldAce(integer $index, string $field) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::deleteClassFieldAce()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_deleteObjectAce"></a><div class="element clickable method public method_deleteObjectAce" data-toggle="collapse" data-target=".method_deleteObjectAce .collapse">
+<h2>Deletes an object-based ACE</h2>
+<pre>deleteObjectAce(integer $index) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::deleteObjectAce()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+</div></div>
+</div>
+<a id="method_deleteObjectFieldAce"></a><div class="element clickable method public method_deleteObjectFieldAce" data-toggle="collapse" data-target=".method_deleteObjectFieldAce .collapse">
+<h2>Deletes an object-field-based ACE</h2>
+<pre>deleteObjectFieldAce(integer $index, string $field) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::deleteObjectFieldAce()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_getClassAces"></a><div class="element clickable method public method_getClassAces" data-toggle="collapse" data-target=".method_getClassAces .collapse">
+<h2>Returns all class-based ACEs associated with this ACL</h2>
+<pre>getClassAces() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\AclInterface::getClassAces()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::getClassAces()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getClassFieldAces"></a><div class="element clickable method public method_getClassFieldAces" data-toggle="collapse" data-target=".method_getClassFieldAces .collapse">
+<h2>Returns all class-field-based ACEs associated with this ACL</h2>
+<pre>getClassFieldAces(string $field) : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\AclInterface::getClassFieldAces()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::getClassFieldAces()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getId"></a><div class="element clickable method public method_getId" data-toggle="collapse" data-target=".method_getId .collapse">
+<h2>Returns the primary key of this ACL</h2>
+<pre>getId() : integer</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::getId()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>integer</code></div>
+</div></div>
+</div>
+<a id="method_getObjectAces"></a><div class="element clickable method public method_getObjectAces" data-toggle="collapse" data-target=".method_getObjectAces .collapse">
+<h2>Returns all object-based ACEs associated with this ACL</h2>
+<pre>getObjectAces() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\AclInterface::getObjectAces()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::getObjectAces()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getObjectFieldAces"></a><div class="element clickable method public method_getObjectFieldAces" data-toggle="collapse" data-target=".method_getObjectFieldAces .collapse">
+<h2>Returns all object-field-based ACEs associated with this ACL</h2>
+<pre>getObjectFieldAces(string $field) : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\AclInterface::getObjectFieldAces()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::getObjectFieldAces()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getObjectIdentity"></a><div class="element clickable method public method_getObjectIdentity" data-toggle="collapse" data-target=".method_getObjectIdentity .collapse">
+<h2>Returns the object identity associated with this ACL</h2>
+<pre>getObjectIdentity() : <a href="../classes/Symfony.Component.Security.Acl.Model.ObjectIdentityInterface.html">\Symfony\Component\Security\Acl\Model\ObjectIdentityInterface</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\AclInterface::getObjectIdentity()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::getObjectIdentity()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Symfony.Component.Security.Acl.Model.ObjectIdentityInterface.html">\Symfony\Component\Security\Acl\Model\ObjectIdentityInterface</a></code></div>
+</div></div>
+</div>
+<a id="method_getParentAcl"></a><div class="element clickable method public method_getParentAcl" data-toggle="collapse" data-target=".method_getParentAcl .collapse">
+<h2>Returns the parent ACL, or null if there is none.</h2>
+<pre>getParentAcl() : <a href="../classes/Symfony.Component.Security.Acl.Model.AclInterface.html">\Symfony\Component\Security\Acl\Model\AclInterface</a> | null</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\AclInterface::getParentAcl()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::getParentAcl()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Symfony.Component.Security.Acl.Model.AclInterface.html">\Symfony\Component\Security\Acl\Model\AclInterface</a></code><code>null</code>
+</div>
+</div></div>
+</div>
+<a id="method_insertClassAce"></a><div class="element clickable method public method_insertClassAce" data-toggle="collapse" data-target=".method_insertClassAce .collapse">
+<h2>Inserts a class-based ACE</h2>
+<pre>insertClassAce(\Symfony\Component\Security\Acl\Model\SecurityIdentityInterface $sid, integer $mask, integer $index, Boolean $granting, string $strategy) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::insertClassAce()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$sid</h4>
+<code><a href="../classes/Symfony.Component.Security.Acl.Model.SecurityIdentityInterface.html">\Symfony\Component\Security\Acl\Model\SecurityIdentityInterface</a></code>
+</div>
+<div class="subelement argument">
+<h4>$mask</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$granting</h4>
+<code>Boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$strategy</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_insertClassFieldAce"></a><div class="element clickable method public method_insertClassFieldAce" data-toggle="collapse" data-target=".method_insertClassFieldAce .collapse">
+<h2>Inserts a class-field-based ACE</h2>
+<pre>insertClassFieldAce(string $field, \Symfony\Component\Security\Acl\Model\SecurityIdentityInterface $sid, integer $mask, integer $index, Boolean $granting, string $strategy) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::insertClassFieldAce()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$sid</h4>
+<code><a href="../classes/Symfony.Component.Security.Acl.Model.SecurityIdentityInterface.html">\Symfony\Component\Security\Acl\Model\SecurityIdentityInterface</a></code>
+</div>
+<div class="subelement argument">
+<h4>$mask</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$granting</h4>
+<code>Boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$strategy</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_insertObjectAce"></a><div class="element clickable method public method_insertObjectAce" data-toggle="collapse" data-target=".method_insertObjectAce .collapse">
+<h2>Inserts an object-based ACE</h2>
+<pre>insertObjectAce(\Symfony\Component\Security\Acl\Model\SecurityIdentityInterface $sid, integer $mask, integer $index, Boolean $granting, string $strategy) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::insertObjectAce()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$sid</h4>
+<code><a href="../classes/Symfony.Component.Security.Acl.Model.SecurityIdentityInterface.html">\Symfony\Component\Security\Acl\Model\SecurityIdentityInterface</a></code>
+</div>
+<div class="subelement argument">
+<h4>$mask</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$granting</h4>
+<code>Boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$strategy</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_insertObjectFieldAce"></a><div class="element clickable method public method_insertObjectFieldAce" data-toggle="collapse" data-target=".method_insertObjectFieldAce .collapse">
+<h2>Inserts an object-field-based ACE</h2>
+<pre>insertObjectFieldAce(string $field, \Symfony\Component\Security\Acl\Model\SecurityIdentityInterface $sid, integer $mask, integer $index, Boolean $granting, string $strategy) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::insertObjectFieldAce()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$sid</h4>
+<code><a href="../classes/Symfony.Component.Security.Acl.Model.SecurityIdentityInterface.html">\Symfony\Component\Security\Acl\Model\SecurityIdentityInterface</a></code>
+</div>
+<div class="subelement argument">
+<h4>$mask</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$granting</h4>
+<code>Boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$strategy</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_isEntriesInheriting"></a><div class="element clickable method public method_isEntriesInheriting" data-toggle="collapse" data-target=".method_isEntriesInheriting .collapse">
+<h2>Whether this ACL is inheriting ACEs from a parent ACL.</h2>
+<pre>isEntriesInheriting() : Boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\AclInterface::isEntriesInheriting()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::isEntriesInheriting()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>Boolean</code></div>
+</div></div>
+</div>
+<a id="method_isFieldGranted"></a><div class="element clickable method public method_isFieldGranted" data-toggle="collapse" data-target=".method_isFieldGranted .collapse">
+<h2>Determines whether field access is granted</h2>
+<pre>isFieldGranted(string $field, array $masks, array $securityIdentities, Boolean $administrativeMode) : Boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\AclInterface::isFieldGranted()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::isFieldGranted()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$masks</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$securityIdentities</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$administrativeMode</h4>
+<code>Boolean</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>Boolean</code></div>
+</div></div>
+</div>
+<a id="method_isGranted"></a><div class="element clickable method public method_isGranted" data-toggle="collapse" data-target=".method_isGranted .collapse">
+<h2>Determines whether access is granted</h2>
+<pre>isGranted(array $masks, array $securityIdentities, Boolean $administrativeMode) : Boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\AclInterface::isGranted()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::isGranted()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$masks</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$securityIdentities</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$administrativeMode</h4>
+<code>Boolean</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Symfony\Component\Security\Acl\Model\NoAceFoundException</code></th>
+<td>when no ACE was applicable for this request</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>Boolean</code></div>
+</div></div>
+</div>
+<a id="method_isSidLoaded"></a><div class="element clickable method public method_isSidLoaded" data-toggle="collapse" data-target=".method_isSidLoaded .collapse">
+<h2>Whether the ACL has loaded ACEs for all of the passed security identities</h2>
+<pre>isSidLoaded(mixed $securityIdentities) : Boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\AclInterface::isSidLoaded()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::isSidLoaded()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$securityIdentities</h4>
+<code>mixed</code><p>an implementation of SecurityIdentityInterface, or an array thereof</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>Boolean</code></div>
+</div></div>
+</div>
+<a id="method_setEntriesInheriting"></a><div class="element clickable method public method_setEntriesInheriting" data-toggle="collapse" data-target=".method_setEntriesInheriting .collapse">
+<h2>Sets whether entries are inherited</h2>
+<pre>setEntriesInheriting(Boolean $boolean) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::setEntriesInheriting()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$boolean</h4>
+<code>Boolean</code>
+</div>
+</div></div>
+</div>
+<a id="method_setParentAcl"></a><div class="element clickable method public method_setParentAcl" data-toggle="collapse" data-target=".method_setParentAcl .collapse">
+<h2>Sets the parent ACL</h2>
+<pre>setParentAcl(\Symfony\Component\Security\Acl\Model\AclInterface $acl) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::setParentAcl()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$acl</h4>
+<code><a href="../classes/Symfony.Component.Security.Acl.Model.AclInterface.html">\Symfony\Component\Security\Acl\Model\AclInterface</a></code><code>null</code>
+</div>
+</div></div>
+</div>
+<a id="method_updateClassAce"></a><div class="element clickable method public method_updateClassAce" data-toggle="collapse" data-target=".method_updateClassAce .collapse">
+<h2>Updates a class-based ACE</h2>
+<pre>updateClassAce(integer $index, integer $mask, string $strategy) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::updateClassAce()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$mask</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$strategy</h4>
+<code>string</code><p>if null the strategy should not be changed</p></div>
+</div></div>
+</div>
+<a id="method_updateClassAuditing"></a><div class="element clickable method public method_updateClassAuditing" data-toggle="collapse" data-target=".method_updateClassAuditing .collapse">
+<h2>Updates auditing for class-based ACE</h2>
+<pre>updateClassAuditing(integer $index, Boolean $auditSuccess, Boolean $auditFailure) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$auditSuccess</h4>
+<code>Boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$auditFailure</h4>
+<code>Boolean</code>
+</div>
+</div></div>
+</div>
+<a id="method_updateClassFieldAce"></a><div class="element clickable method public method_updateClassFieldAce" data-toggle="collapse" data-target=".method_updateClassFieldAce .collapse">
+<h2>Updates a class-field-based ACE</h2>
+<pre>updateClassFieldAce(integer $index, string $field, integer $mask, string $strategy) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::updateClassFieldAce()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$mask</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$strategy</h4>
+<code>string</code><p>if null the strategy should not be changed</p></div>
+</div></div>
+</div>
+<a id="method_updateClassFieldAuditing"></a><div class="element clickable method public method_updateClassFieldAuditing" data-toggle="collapse" data-target=".method_updateClassFieldAuditing .collapse">
+<h2>Updates auditing for class-field-based ACE</h2>
+<pre>updateClassFieldAuditing(integer $index, string $field, Boolean $auditSuccess, Boolean $auditFailure) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$auditSuccess</h4>
+<code>Boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$auditFailure</h4>
+<code>Boolean</code>
+</div>
+</div></div>
+</div>
+<a id="method_updateObjectAce"></a><div class="element clickable method public method_updateObjectAce" data-toggle="collapse" data-target=".method_updateObjectAce .collapse">
+<h2>Updates an object-based ACE</h2>
+<pre>updateObjectAce(integer $index, integer $mask, string $strategy) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::updateObjectAce()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$mask</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$strategy</h4>
+<code>string</code><p>if null the strategy should not be changed</p></div>
+</div></div>
+</div>
+<a id="method_updateObjectAuditing"></a><div class="element clickable method public method_updateObjectAuditing" data-toggle="collapse" data-target=".method_updateObjectAuditing .collapse">
+<h2>Updates auditing for object-based ACE</h2>
+<pre>updateObjectAuditing(integer $index, Boolean $auditSuccess, Boolean $auditFailure) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$auditSuccess</h4>
+<code>Boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$auditFailure</h4>
+<code>Boolean</code>
+</div>
+</div></div>
+</div>
+<a id="method_updateObjectFieldAce"></a><div class="element clickable method public method_updateObjectFieldAce" data-toggle="collapse" data-target=".method_updateObjectFieldAce .collapse">
+<h2>Updates an object-field-based ACE</h2>
+<pre>updateObjectFieldAce(integer $index, string $field, integer $mask, string $strategy) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Symfony\Component\Security\Acl\Model\MutableAclInterface::updateObjectFieldAce()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$mask</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$strategy</h4>
+<code>string</code><p>if null the strategy should not be changed</p></div>
+</div></div>
+</div>
+<a id="method_updateObjectFieldAuditing"></a><div class="element clickable method public method_updateObjectFieldAuditing" data-toggle="collapse" data-target=".method_updateObjectFieldAuditing .collapse">
+<h2>Updates auditing for object-field-based ACE</h2>
+<pre>updateObjectFieldAuditing(integer $index, string $field, Boolean $auditSuccess, Boolean $auditFailure) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$auditSuccess</h4>
+<code>Boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$auditFailure</h4>
+<code>Boolean</code>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-11-12T19:25:24Z.<br></footer></div>
+</div>
+</body>
+</html>

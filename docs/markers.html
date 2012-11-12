@@ -20,7 +20,9 @@
 <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
+<li><a href="namespaces/Acme.html"><i class="icon-th"></i> Acme</a></li>
 <li><a href="namespaces/BarnabyWalters.html"><i class="icon-th"></i> BarnabyWalters</a></li>
+<li><a href="namespaces/Symfony.html"><i class="icon-th"></i> Symfony</a></li>
 </ul>
 </li>
 <li class="dropdown" id="charts-menu">
@@ -31,11 +33,16 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">15</span></a></li>
+                <span class="label label-info">1456</span></a></li>
 <li><a href="markers.html"><i class="icon-map-marker"></i> Markers 
-                <ul><li>todo 
-                <span class="label label-info">2</span>
-</li></ul></a></li>
+                <ul>
+<li>todo 
+                <span class="label label-info">3</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
 <li><a href="deprecated.html"><i class="icon-stop"></i> Deprecated elements 
                 <span class="label label-info">0</span></a></li>
 </ul>
@@ -52,8 +59,10 @@
 <div class="row">
 <div class="span4"><ul class="side-nav nav nav-list">
 <li class="nav-header">Navigation</li>
-<li><a href="#Listener/IndieauthListener.php"><i class="icon-file"></i>Listener/IndieauthListener.php</a></li>
-<li><a href="#Provider/IndieauthProvider.php"><i class="icon-file"></i>Provider/IndieauthProvider.php</a></li>
+<li><a href="#BarnabyWalters/Indieauth/Listener/IndieauthListener.php"><i class="icon-file"></i>BarnabyWalters/Indieauth/Listener/IndieauthListener.php</a></li>
+<li><a href="#BarnabyWalters/Indieauth/Provider/IndieauthProvider.php"><i class="icon-file"></i>BarnabyWalters/Indieauth/Provider/IndieauthProvider.php</a></li>
+<li><a href="#vendor/symfony/security/Symfony/Component/Security/Acl/Dbal/AclProvider.php"><i class="icon-file"></i>vendor/symfony/security/Symfony/Component/Security/Acl/Dbal/AclProvider.php</a></li>
+<li><a href="#vendor/symfony/security/Symfony/Component/Security/Acl/Dbal/MutableAclProvider.php"><i class="icon-file"></i>vendor/symfony/security/Symfony/Component/Security/Acl/Dbal/MutableAclProvider.php</a></li>
 </ul></div>
 <div class="span8">
 <ul class="breadcrumb">
@@ -64,14 +73,19 @@
 </ul>
 <div class="alert alert-info">
                         The following markers were found:
-                        <ul><li>todo 
-                <span class="label label-info">2</span>
-</li></ul>
+                        <ul>
+<li>todo 
+                <span class="label label-info">3</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul>
 </div>
 <div id="marker-accordion">
 <div class="package-contents">
-<a name="Listener/IndieauthListener.php" id="Listener/IndieauthListener.php"></a><h3>
-<i class="icon-file"></i>Listener/IndieauthListener.php<small style="float: right;padding-right: 10px;">1</small>
+<a name="BarnabyWalters/Indieauth/Listener/IndieauthListener.php" id="BarnabyWalters/Indieauth/Listener/IndieauthListener.php"></a><h3>
+<i class="icon-file"></i>BarnabyWalters/Indieauth/Listener/IndieauthListener.php<small style="float: right;padding-right: 10px;">1</small>
 </h3>
 <div><table class="table markers table-bordered">
 <tr>
@@ -81,14 +95,14 @@
 </tr>
 <tr>
 <td>todo</td>
-<td>9</td>
-<td>add a check for ?token somewhere, not sure where is the most useful place though</td>
+<td>39</td>
+<td>What to do if there is no token param? Should that conditional even be in here?</td>
 </tr>
 </table></div>
 </div>
 <div class="package-contents">
-<a name="Provider/IndieauthProvider.php" id="Provider/IndieauthProvider.php"></a><h3>
-<i class="icon-file"></i>Provider/IndieauthProvider.php<small style="float: right;padding-right: 10px;">1</small>
+<a name="BarnabyWalters/Indieauth/Provider/IndieauthProvider.php" id="BarnabyWalters/Indieauth/Provider/IndieauthProvider.php"></a><h3>
+<i class="icon-file"></i>BarnabyWalters/Indieauth/Provider/IndieauthProvider.php<small style="float: right;padding-right: 10px;">2</small>
 </h3>
 <div><table class="table markers table-bordered">
 <tr>
@@ -98,8 +112,57 @@
 </tr>
 <tr>
 <td>todo</td>
-<td>58</td>
-<td>for some reason this is being called multiple times, with no credentials on the second time</td>
+<td>40</td>
+<td>Monolog or Symfony LoggerInterface? I think symfony is adopting Monolog</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>108</td>
+<td>handle people who aren’t in my address book gracefully (in the userProvider?)</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="vendor/symfony/security/Symfony/Component/Security/Acl/Dbal/AclProvider.php" id="vendor/symfony/security/Symfony/Component/Security/Acl/Dbal/AclProvider.php"></a><h3>
+<i class="icon-file"></i>vendor/symfony/security/Symfony/Component/Security/Acl/Dbal/AclProvider.php<small style="float: right;padding-right: 10px;">3</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>fixme</td>
+<td>114</td>
+<td>we need to load ACEs for the missing SIDs. This is never</td>
+</tr>
+<tr>
+<td>fixme</td>
+<td>212</td>
+<td>add support for filtering by sids (right now we select all sids)</td>
+</tr>
+<tr>
+<td>fixme</td>
+<td>386</td>
+<td>skip ancestors which are cached</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="vendor/symfony/security/Symfony/Component/Security/Acl/Dbal/MutableAclProvider.php" id="vendor/symfony/security/Symfony/Component/Security/Acl/Dbal/MutableAclProvider.php"></a><h3>
+<i class="icon-file"></i>vendor/symfony/security/Symfony/Component/Security/Acl/Dbal/MutableAclProvider.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>fixme</td>
+<td>319</td>
+<td>Currently, there is no easy way to clear the cache for ACLs</td>
 </tr>
 </table></div>
 </div>
@@ -109,7 +172,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
-            generated on 2012-11-12T18:47:18Z.<br></footer></div>
+            generated on 2012-11-12T19:25:31Z.<br></footer></div>
 </div>
 </body>
 </html>

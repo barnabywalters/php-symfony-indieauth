@@ -1,0 +1,447 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>BarnabyWalters Helpers Docs » \Symfony\Component\Security\Tests\Acl\Dbal\MutableAclProviderTest</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">BarnabyWalters Helpers Docs</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Acme.html"><i class="icon-th"></i> Acme</a></li>
+<li><a href="../namespaces/BarnabyWalters.html"><i class="icon-th"></i> BarnabyWalters</a></li>
+<li><a href="../namespaces/Symfony.html"><i class="icon-th"></i> Symfony</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">1456</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">3</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_assertAceEquals" title="assertAceEquals :: "><span class="description">assertAceEquals()
+        </span><pre>assertAceEquals()</pre></a></li>
+<li class="method public "><a href="#method_setField" title="setField :: "><span class="description">setField()
+        </span><pre>setField()</pre></a></li>
+<li class="method public "><a href="#method_testCreateAcl" title="testCreateAcl :: "><span class="description">testCreateAcl()
+        </span><pre>testCreateAcl()</pre></a></li>
+<li class="method public "><a href="#method_testCreateAclThrowsExceptionWhenAclAlreadyExists" title="testCreateAclThrowsExceptionWhenAclAlreadyExists :: "><span class="description">testCreateAclThrowsExceptionWhenAclAlreadyExists()
+        </span><pre>testCreateAclThrowsExceptionWhenAclAlreadyExists()</pre></a></li>
+<li class="method public "><a href="#method_testDeleteAcl" title="testDeleteAcl :: "><span class="description">testDeleteAcl()
+        </span><pre>testDeleteAcl()</pre></a></li>
+<li class="method public "><a href="#method_testDeleteAclDeletesChildren" title="testDeleteAclDeletesChildren :: "><span class="description">testDeleteAclDeletesChildren()
+        </span><pre>testDeleteAclDeletesChildren()</pre></a></li>
+<li class="method public "><a href="#method_testFindAclsAddsPropertyListener" title="testFindAclsAddsPropertyListener :: "><span class="description">testFindAclsAddsPropertyListener()
+        </span><pre>testFindAclsAddsPropertyListener()</pre></a></li>
+<li class="method public "><a href="#method_testFindAclsAddsPropertyListenerOnlyOnce" title="testFindAclsAddsPropertyListenerOnlyOnce :: "><span class="description">testFindAclsAddsPropertyListenerOnlyOnce()
+        </span><pre>testFindAclsAddsPropertyListenerOnlyOnce()</pre></a></li>
+<li class="method public "><a href="#method_testFindAclsAddsPropertyListenerToParentAcls" title="testFindAclsAddsPropertyListenerToParentAcls :: "><span class="description">testFindAclsAddsPropertyListenerToParentAcls()
+        </span><pre>testFindAclsAddsPropertyListenerToParentAcls()</pre></a></li>
+<li class="method public "><a href="#method_testPropertyChangedDoesNotTrackUnmanagedAcls" title="testPropertyChangedDoesNotTrackUnmanagedAcls :: "><span class="description">testPropertyChangedDoesNotTrackUnmanagedAcls()
+        </span><pre>testPropertyChangedDoesNotTrackUnmanagedAcls()</pre></a></li>
+<li class="method public "><a href="#method_testPropertyChangedTracksChangesToAceProperties" title="testPropertyChangedTracksChangesToAceProperties :: "><span class="description">testPropertyChangedTracksChangesToAceProperties()
+        </span><pre>testPropertyChangedTracksChangesToAceProperties()</pre></a></li>
+<li class="method public "><a href="#method_testPropertyChangedTracksChangesToAclProperties" title="testPropertyChangedTracksChangesToAclProperties :: "><span class="description">testPropertyChangedTracksChangesToAclProperties()
+        </span><pre>testPropertyChangedTracksChangesToAclProperties()</pre></a></li>
+<li class="method public "><a href="#method_testUpdateAcl" title="testUpdateAcl :: "><span class="description">testUpdateAcl()
+        </span><pre>testUpdateAcl()</pre></a></li>
+<li class="method public "><a href="#method_testUpdateAclDoesNotAcceptUntrackedAcls" title="testUpdateAclDoesNotAcceptUntrackedAcls :: "><span class="description">testUpdateAclDoesNotAcceptUntrackedAcls()
+        </span><pre>testUpdateAclDoesNotAcceptUntrackedAcls()</pre></a></li>
+<li class="method public "><a href="#method_testUpdateAclThrowsExceptionOnConcurrentModificationOfSharedProperties" title="testUpdateAclThrowsExceptionOnConcurrentModificationOfSharedProperties :: "><span class="description">testUpdateAclThrowsExceptionOnConcurrentModificationOfSharedProperties()
+        </span><pre>testUpdateAclThrowsExceptionOnConcurrentModificationOfSharedProperties()</pre></a></li>
+<li class="method public "><a href="#method_testUpdateAclUpdatesChildAclsCorrectly" title="testUpdateAclUpdatesChildAclsCorrectly :: "><span class="description">testUpdateAclUpdatesChildAclsCorrectly()
+        </span><pre>testUpdateAclUpdatesChildAclsCorrectly()</pre></a></li>
+<li class="method public "><a href="#method_testUpdateAclWorksForChangingTheParentAcl" title="testUpdateAclWorksForChangingTheParentAcl :: "><span class="description">testUpdateAclWorksForChangingTheParentAcl()
+        </span><pre>testUpdateAclWorksForChangingTheParentAcl()</pre></a></li>
+<li class="method public "><a href="#method_testUpdateDoesNothingWhenThereAreNoChanges" title="testUpdateDoesNothingWhenThereAreNoChanges :: "><span class="description">testUpdateDoesNothingWhenThereAreNoChanges()
+        </span><pre>testUpdateDoesNothingWhenThereAreNoChanges()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method_callMethod" title="callMethod :: "><span class="description">callMethod()
+        </span><pre>callMethod()</pre></a></li>
+<li class="method protected "><a href="#method_getField" title="getField :: "><span class="description">getField()
+        </span><pre>getField()</pre></a></li>
+<li class="method protected "><a href="#method_getOptions" title="getOptions :: "><span class="description">getOptions()
+        </span><pre>getOptions()</pre></a></li>
+<li class="method protected "><a href="#method_getProvider" title="getProvider :: "><span class="description">getProvider()
+        </span><pre>getProvider()</pre></a></li>
+<li class="method protected "><a href="#method_getStrategy" title="getStrategy :: "><span class="description">getStrategy()
+        </span><pre>getStrategy()</pre></a></li>
+<li class="method protected "><a href="#method_importAcls" title="importAcls :: Data must have the following format:
+array(
+    *name* =&gt; array(
+        'object_identifier' =&gt; *required*
+        'class_type' =&gt; *required*,
+        'parent_acl' =&gt; *name (optional)*
+    ),
+)"><span class="description">Data must have the following format:
+array(
+    *name* =&gt; array(
+        'object_identifier' =&gt; *required*
+        'class_type' =&gt; *required*,
+        'parent_acl' =&gt; *name (optional)*
+    ),
+)</span><pre>importAcls()</pre></a></li>
+<li class="method protected "><a href="#method_setUp" title="setUp :: "><span class="description">setUp()
+        </span><pre>setUp()</pre></a></li>
+<li class="method protected "><a href="#method_tearDown" title="tearDown :: "><span class="description">tearDown()
+        </span><pre>tearDown()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="property protected "><a href="#property_con" title="$con :: "><span class="description">$con</span><pre>$con</pre></a></li></ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Symfony\Component\Security\Tests\Acl\Dbal\MutableAclProviderTest"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Tests.html">Tests</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Tests.Acl.html">Acl</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Tests.Acl.Dbal.html">Dbal</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Symfony.Component.Security.Tests.Acl.Dbal.MutableAclProviderTest.html">MutableAclProviderTest</a>
+</li>
+</ul>
+<div class="element class"><div class="details">
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_assertAceEquals"></a><div class="element clickable method public method_assertAceEquals" data-toggle="collapse" data-target=".method_assertAceEquals .collapse">
+<h2>assertAceEquals()
+        </h2>
+<pre>assertAceEquals(\Symfony\Component\Security\Acl\Model\EntryInterface $a, \Symfony\Component\Security\Acl\Model\EntryInterface $b) </pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$a</h4></div>
+<div class="subelement argument"><h4>$b</h4></div>
+</div></div>
+</div>
+<a id="method_setField"></a><div class="element clickable method public method_setField" data-toggle="collapse" data-target=".method_setField .collapse">
+<h2>setField()
+        </h2>
+<pre>setField($object, $field, $value) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$object</h4></div>
+<div class="subelement argument"><h4>$field</h4></div>
+<div class="subelement argument"><h4>$value</h4></div>
+</div></div>
+</div>
+<a id="method_testCreateAcl"></a><div class="element clickable method public method_testCreateAcl" data-toggle="collapse" data-target=".method_testCreateAcl .collapse">
+<h2>testCreateAcl()
+        </h2>
+<pre>testCreateAcl() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_testCreateAclThrowsExceptionWhenAclAlreadyExists"></a><div class="element clickable method public method_testCreateAclThrowsExceptionWhenAclAlreadyExists" data-toggle="collapse" data-target=".method_testCreateAclThrowsExceptionWhenAclAlreadyExists .collapse">
+<h2>testCreateAclThrowsExceptionWhenAclAlreadyExists()
+        </h2>
+<pre>testCreateAclThrowsExceptionWhenAclAlreadyExists() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>expectedException</th>
+<td>Symfony\Component\Security\Acl\Exception\AclAlreadyExistsException</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testDeleteAcl"></a><div class="element clickable method public method_testDeleteAcl" data-toggle="collapse" data-target=".method_testDeleteAcl .collapse">
+<h2>testDeleteAcl()
+        </h2>
+<pre>testDeleteAcl() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_testDeleteAclDeletesChildren"></a><div class="element clickable method public method_testDeleteAclDeletesChildren" data-toggle="collapse" data-target=".method_testDeleteAclDeletesChildren .collapse">
+<h2>testDeleteAclDeletesChildren()
+        </h2>
+<pre>testDeleteAclDeletesChildren() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_testFindAclsAddsPropertyListener"></a><div class="element clickable method public method_testFindAclsAddsPropertyListener" data-toggle="collapse" data-target=".method_testFindAclsAddsPropertyListener .collapse">
+<h2>testFindAclsAddsPropertyListener()
+        </h2>
+<pre>testFindAclsAddsPropertyListener() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_testFindAclsAddsPropertyListenerOnlyOnce"></a><div class="element clickable method public method_testFindAclsAddsPropertyListenerOnlyOnce" data-toggle="collapse" data-target=".method_testFindAclsAddsPropertyListenerOnlyOnce .collapse">
+<h2>testFindAclsAddsPropertyListenerOnlyOnce()
+        </h2>
+<pre>testFindAclsAddsPropertyListenerOnlyOnce() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_testFindAclsAddsPropertyListenerToParentAcls"></a><div class="element clickable method public method_testFindAclsAddsPropertyListenerToParentAcls" data-toggle="collapse" data-target=".method_testFindAclsAddsPropertyListenerToParentAcls .collapse">
+<h2>testFindAclsAddsPropertyListenerToParentAcls()
+        </h2>
+<pre>testFindAclsAddsPropertyListenerToParentAcls() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_testPropertyChangedDoesNotTrackUnmanagedAcls"></a><div class="element clickable method public method_testPropertyChangedDoesNotTrackUnmanagedAcls" data-toggle="collapse" data-target=".method_testPropertyChangedDoesNotTrackUnmanagedAcls .collapse">
+<h2>testPropertyChangedDoesNotTrackUnmanagedAcls()
+        </h2>
+<pre>testPropertyChangedDoesNotTrackUnmanagedAcls() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>expectedException</th>
+<td>\InvalidArgumentException</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testPropertyChangedTracksChangesToAceProperties"></a><div class="element clickable method public method_testPropertyChangedTracksChangesToAceProperties" data-toggle="collapse" data-target=".method_testPropertyChangedTracksChangesToAceProperties .collapse">
+<h2>testPropertyChangedTracksChangesToAceProperties()
+        </h2>
+<pre>testPropertyChangedTracksChangesToAceProperties() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_testPropertyChangedTracksChangesToAclProperties"></a><div class="element clickable method public method_testPropertyChangedTracksChangesToAclProperties" data-toggle="collapse" data-target=".method_testPropertyChangedTracksChangesToAclProperties .collapse">
+<h2>testPropertyChangedTracksChangesToAclProperties()
+        </h2>
+<pre>testPropertyChangedTracksChangesToAclProperties() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_testUpdateAcl"></a><div class="element clickable method public method_testUpdateAcl" data-toggle="collapse" data-target=".method_testUpdateAcl .collapse">
+<h2>testUpdateAcl()
+        </h2>
+<pre>testUpdateAcl() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_testUpdateAclDoesNotAcceptUntrackedAcls"></a><div class="element clickable method public method_testUpdateAclDoesNotAcceptUntrackedAcls" data-toggle="collapse" data-target=".method_testUpdateAclDoesNotAcceptUntrackedAcls .collapse">
+<h2>testUpdateAclDoesNotAcceptUntrackedAcls()
+        </h2>
+<pre>testUpdateAclDoesNotAcceptUntrackedAcls() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>expectedException</th>
+<td>\InvalidArgumentException</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testUpdateAclThrowsExceptionOnConcurrentModificationOfSharedProperties"></a><div class="element clickable method public method_testUpdateAclThrowsExceptionOnConcurrentModificationOfSharedProperties" data-toggle="collapse" data-target=".method_testUpdateAclThrowsExceptionOnConcurrentModificationOfSharedProperties .collapse">
+<h2>testUpdateAclThrowsExceptionOnConcurrentModificationOfSharedProperties()
+        </h2>
+<pre>testUpdateAclThrowsExceptionOnConcurrentModificationOfSharedProperties() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_testUpdateAclUpdatesChildAclsCorrectly"></a><div class="element clickable method public method_testUpdateAclUpdatesChildAclsCorrectly" data-toggle="collapse" data-target=".method_testUpdateAclUpdatesChildAclsCorrectly .collapse">
+<h2>testUpdateAclUpdatesChildAclsCorrectly()
+        </h2>
+<pre>testUpdateAclUpdatesChildAclsCorrectly() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_testUpdateAclWorksForChangingTheParentAcl"></a><div class="element clickable method public method_testUpdateAclWorksForChangingTheParentAcl" data-toggle="collapse" data-target=".method_testUpdateAclWorksForChangingTheParentAcl .collapse">
+<h2>testUpdateAclWorksForChangingTheParentAcl()
+        </h2>
+<pre>testUpdateAclWorksForChangingTheParentAcl() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_testUpdateDoesNothingWhenThereAreNoChanges"></a><div class="element clickable method public method_testUpdateDoesNothingWhenThereAreNoChanges" data-toggle="collapse" data-target=".method_testUpdateDoesNothingWhenThereAreNoChanges .collapse">
+<h2>testUpdateDoesNothingWhenThereAreNoChanges()
+        </h2>
+<pre>testUpdateDoesNothingWhenThereAreNoChanges() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_callMethod"></a><div class="element clickable method protected method_callMethod" data-toggle="collapse" data-target=".method_callMethod .collapse">
+<h2>callMethod()
+        </h2>
+<pre>callMethod($object, $method, array $args) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$object</h4></div>
+<div class="subelement argument"><h4>$method</h4></div>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<a id="method_getField"></a><div class="element clickable method protected method_getField" data-toggle="collapse" data-target=".method_getField .collapse">
+<h2>getField()
+        </h2>
+<pre>getField($object, $field) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$object</h4></div>
+<div class="subelement argument"><h4>$field</h4></div>
+</div></div>
+</div>
+<a id="method_getOptions"></a><div class="element clickable method protected method_getOptions" data-toggle="collapse" data-target=".method_getOptions .collapse">
+<h2>getOptions()
+        </h2>
+<pre>getOptions() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getProvider"></a><div class="element clickable method protected method_getProvider" data-toggle="collapse" data-target=".method_getProvider .collapse">
+<h2>getProvider()
+        </h2>
+<pre>getProvider($cache) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$cache</h4></div>
+</div></div>
+</div>
+<a id="method_getStrategy"></a><div class="element clickable method protected method_getStrategy" data-toggle="collapse" data-target=".method_getStrategy .collapse">
+<h2>getStrategy()
+        </h2>
+<pre>getStrategy() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_importAcls"></a><div class="element clickable method protected method_importAcls" data-toggle="collapse" data-target=".method_importAcls .collapse">
+<h2>Data must have the following format:
+array(
+    *name* =&gt; array(
+        'object_identifier' =&gt; *required*
+        'class_type' =&gt; *required*,
+        'parent_acl' =&gt; *name (optional)*
+    ),
+)</h2>
+<pre>importAcls(\Symfony\Component\Security\Acl\Dbal\AclProvider $provider, array $data) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$provider</h4>
+<code><a href="../classes/Symfony.Component.Security.Acl.Dbal.AclProvider.html">\Symfony\Component\Security\Acl\Dbal\AclProvider</a></code>
+</div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td></td>
+</tr>
+<tr>
+<th><code>\Symfony\Component\Security\Tests\Acl\Dbal\Exception</code></th>
+<td></td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_setUp"></a><div class="element clickable method protected method_setUp" data-toggle="collapse" data-target=".method_setUp .collapse">
+<h2>setUp()
+        </h2>
+<pre>setUp() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_tearDown"></a><div class="element clickable method protected method_tearDown" data-toggle="collapse" data-target=".method_tearDown .collapse">
+<h2>tearDown()
+        </h2>
+<pre>tearDown() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_con"> </a><div class="element clickable property protected property_con" data-toggle="collapse" data-target=".property_con .collapse">
+<h2>$con</h2>
+<pre>$con </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-11-12T19:25:29Z.<br></footer></div>
+</div>
+</body>
+</html>

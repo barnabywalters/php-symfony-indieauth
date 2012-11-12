@@ -1,0 +1,573 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>BarnabyWalters Helpers Docs » Symfony\Component\Security\Acl</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">BarnabyWalters Helpers Docs</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Acme.html"><i class="icon-th"></i> Acme</a></li>
+<li><a href="../namespaces/BarnabyWalters.html"><i class="icon-th"></i> BarnabyWalters</a></li>
+<li><a href="../namespaces/Symfony.html"><i class="icon-th"></i> Symfony</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">1456</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">3</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Namespaces</li>
+<li>
+<span class="empty-namespace"><i class="icon-stop"></i>Acl</span><ul class="nav nav-list nav-namespaces">
+<li>
+<a href="../namespaces/Symfony.Component.Security.Acl.Dbal.html" title="Dbal"><i class="icon-th"></i>Dbal</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Symfony.Component.Security.Acl.Domain.html" title="Domain"><i class="icon-th"></i>Domain</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Symfony.Component.Security.Acl.Exception.html" title="Exception"><i class="icon-th"></i>Exception</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Symfony.Component.Security.Acl.Model.html" title="Model"><i class="icon-th"></i>Model</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Symfony.Component.Security.Acl.Permission.html" title="Permission"><i class="icon-th"></i>Permission</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Symfony.Component.Security.Acl.Voter.html" title="Voter"><i class="icon-th"></i>Voter</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8 namespace-contents">
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.html">Acl</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<div class="alert alert-info">This namespace does not contain any documentable elements</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.html">Acl</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.Dbal.html">Dbal</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="AclProvider" class="element ajax clickable class">
+<h1>AclProvider<a href="../classes/Symfony.Component.Security.Acl.Dbal.AclProvider.html">¶</a>
+</h1>
+<p class="short_description">An ACL provider implementation.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Dbal.AclProvider.html" class="more">« More »</a>
+</div>
+<div id="MutableAclProvider" class="element ajax clickable class">
+<h1>MutableAclProvider<a href="../classes/Symfony.Component.Security.Acl.Dbal.MutableAclProvider.html">¶</a>
+</h1>
+<p class="short_description">An implementation of the MutableAclProviderInterface using Doctrine DBAL.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Dbal.MutableAclProvider.html" class="more">« More »</a>
+</div>
+<div id="Schema" class="element ajax clickable class">
+<h1>Schema<a href="../classes/Symfony.Component.Security.Acl.Dbal.Schema.html">¶</a>
+</h1>
+<p class="short_description">The schema used for the ACL system.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Dbal.Schema.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.html">Acl</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.Domain.html">Domain</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="Acl" class="element ajax clickable class">
+<h1>Acl<a href="../classes/Symfony.Component.Security.Acl.Domain.Acl.html">¶</a>
+</h1>
+<p class="short_description">An ACL implementation.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Domain.Acl.html" class="more">« More »</a>
+</div>
+<div id="AclCollectionCache" class="element ajax clickable class">
+<h1>AclCollectionCache<a href="../classes/Symfony.Component.Security.Acl.Domain.AclCollectionCache.html">¶</a>
+</h1>
+<p class="short_description">This service caches ACLs for an entire collection of objects.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Domain.AclCollectionCache.html" class="more">« More »</a>
+</div>
+<div id="AuditLogger" class="element ajax clickable class">
+<h1>AuditLogger<a href="../classes/Symfony.Component.Security.Acl.Domain.AuditLogger.html">¶</a>
+</h1>
+<p class="short_description">Base audit logger implementation</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Domain.AuditLogger.html" class="more">« More »</a>
+</div>
+<div id="DoctrineAclCache" class="element ajax clickable class">
+<h1>DoctrineAclCache<a href="../classes/Symfony.Component.Security.Acl.Domain.DoctrineAclCache.html">¶</a>
+</h1>
+<p class="short_description">This class is a wrapper around the actual cache implementation.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Domain.DoctrineAclCache.html" class="more">« More »</a>
+</div>
+<div id="Entry" class="element ajax clickable class">
+<h1>Entry<a href="../classes/Symfony.Component.Security.Acl.Domain.Entry.html">¶</a>
+</h1>
+<p class="short_description">Auditable ACE implementation</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Domain.Entry.html" class="more">« More »</a>
+</div>
+<div id="FieldEntry" class="element ajax clickable class">
+<h1>FieldEntry<a href="../classes/Symfony.Component.Security.Acl.Domain.FieldEntry.html">¶</a>
+</h1>
+<p class="short_description">Field-aware ACE implementation which is auditable</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Domain.FieldEntry.html" class="more">« More »</a>
+</div>
+<div id="ObjectIdentity" class="element ajax clickable class">
+<h1>ObjectIdentity<a href="../classes/Symfony.Component.Security.Acl.Domain.ObjectIdentity.html">¶</a>
+</h1>
+<p class="short_description">ObjectIdentity implementation</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Domain.ObjectIdentity.html" class="more">« More »</a>
+</div>
+<div id="ObjectIdentityRetrievalStrategy" class="element ajax clickable class">
+<h1>ObjectIdentityRetrievalStrategy<a href="../classes/Symfony.Component.Security.Acl.Domain.ObjectIdentityRetrievalStrategy.html">¶</a>
+</h1>
+<p class="short_description">Strategy to be used for retrieving object identities from domain objects</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Domain.ObjectIdentityRetrievalStrategy.html" class="more">« More »</a>
+</div>
+<div id="PermissionGrantingStrategy" class="element ajax clickable class">
+<h1>PermissionGrantingStrategy<a href="../classes/Symfony.Component.Security.Acl.Domain.PermissionGrantingStrategy.html">¶</a>
+</h1>
+<p class="short_description">The permission granting strategy to apply to the access control list.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Domain.PermissionGrantingStrategy.html" class="more">« More »</a>
+</div>
+<div id="RoleSecurityIdentity" class="element ajax clickable class">
+<h1>RoleSecurityIdentity<a href="../classes/Symfony.Component.Security.Acl.Domain.RoleSecurityIdentity.html">¶</a>
+</h1>
+<p class="short_description">A SecurityIdentity implementation for roles</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Domain.RoleSecurityIdentity.html" class="more">« More »</a>
+</div>
+<div id="SecurityIdentityRetrievalStrategy" class="element ajax clickable class">
+<h1>SecurityIdentityRetrievalStrategy<a href="../classes/Symfony.Component.Security.Acl.Domain.SecurityIdentityRetrievalStrategy.html">¶</a>
+</h1>
+<p class="short_description">Strategy for retrieving security identities</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Domain.SecurityIdentityRetrievalStrategy.html" class="more">« More »</a>
+</div>
+<div id="UserSecurityIdentity" class="element ajax clickable class">
+<h1>UserSecurityIdentity<a href="../classes/Symfony.Component.Security.Acl.Domain.UserSecurityIdentity.html">¶</a>
+</h1>
+<p class="short_description">A SecurityIdentity implementation used for actual users</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Domain.UserSecurityIdentity.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.html">Acl</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.Exception.html">Exception</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="AclAlreadyExistsException" class="element ajax clickable class">
+<h1>AclAlreadyExistsException<a href="../classes/Symfony.Component.Security.Acl.Exception.AclAlreadyExistsException.html">¶</a>
+</h1>
+<p class="short_description">This exception is thrown when someone tries to create an ACL for an object
+identity that already has one.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Exception.AclAlreadyExistsException.html" class="more">« More »</a>
+</div>
+<div id="AclNotFoundException" class="element ajax clickable class">
+<h1>AclNotFoundException<a href="../classes/Symfony.Component.Security.Acl.Exception.AclNotFoundException.html">¶</a>
+</h1>
+<p class="short_description">This exception is thrown when we cannot locate an ACL for a passed
+ObjectIdentity implementation.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Exception.AclNotFoundException.html" class="more">« More »</a>
+</div>
+<div id="ConcurrentModificationException" class="element ajax clickable class">
+<h1>ConcurrentModificationException<a href="../classes/Symfony.Component.Security.Acl.Exception.ConcurrentModificationException.html">¶</a>
+</h1>
+<p class="short_description">This exception is thrown whenever you change shared properties of more than
+one ACL of the same class type concurrently.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Exception.ConcurrentModificationException.html" class="more">« More »</a>
+</div>
+<div id="Exception" class="element ajax clickable class">
+<h1>Exception<a href="../classes/Symfony.Component.Security.Acl.Exception.Exception.html">¶</a>
+</h1>
+<p class="short_description">Base ACL exception</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Exception.Exception.html" class="more">« More »</a>
+</div>
+<div id="InvalidDomainObjectException" class="element ajax clickable class">
+<h1>InvalidDomainObjectException<a href="../classes/Symfony.Component.Security.Acl.Exception.InvalidDomainObjectException.html">¶</a>
+</h1>
+<p class="short_description">This exception is thrown when ObjectIdentity fails to construct an object
+identity from the passed domain object.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Exception.InvalidDomainObjectException.html" class="more">« More »</a>
+</div>
+<div id="NoAceFoundException" class="element ajax clickable class">
+<h1>NoAceFoundException<a href="../classes/Symfony.Component.Security.Acl.Exception.NoAceFoundException.html">¶</a>
+</h1>
+<p class="short_description">This exception is thrown when we cannot locate an ACE that matches the
+combination of permission masks and security identities.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Exception.NoAceFoundException.html" class="more">« More »</a>
+</div>
+<div id="NotAllAclsFoundException" class="element ajax clickable class">
+<h1>NotAllAclsFoundException<a href="../classes/Symfony.Component.Security.Acl.Exception.NotAllAclsFoundException.html">¶</a>
+</h1>
+<p class="short_description">This exception is thrown when you have requested ACLs for multiple object
+identities, but the AclProvider implementation failed to find ACLs for all
+identities.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Exception.NotAllAclsFoundException.html" class="more">« More »</a>
+</div>
+<div id="SidNotLoadedException" class="element ajax clickable class">
+<h1>SidNotLoadedException<a href="../classes/Symfony.Component.Security.Acl.Exception.SidNotLoadedException.html">¶</a>
+</h1>
+<p class="short_description">This exception is thrown when ACEs for an SID are requested which has not
+been loaded from the database.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Exception.SidNotLoadedException.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.html">Acl</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.Model.html">Model</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="AclCacheInterface" class="element ajax clickable interface">
+<h1>AclCacheInterface<a href="../classes/Symfony.Component.Security.Acl.Model.AclCacheInterface.html">¶</a>
+</h1>
+<p class="short_description">AclCache Interface</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Model.AclCacheInterface.html" class="more">« More »</a>
+</div>
+<div id="AclInterface" class="element ajax clickable interface">
+<h1>AclInterface<a href="../classes/Symfony.Component.Security.Acl.Model.AclInterface.html">¶</a>
+</h1>
+<p class="short_description">This interface represents an access control list (ACL) for a domain object.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Model.AclInterface.html" class="more">« More »</a>
+</div>
+<div id="AclProviderInterface" class="element ajax clickable interface">
+<h1>AclProviderInterface<a href="../classes/Symfony.Component.Security.Acl.Model.AclProviderInterface.html">¶</a>
+</h1>
+<p class="short_description">Provides a common interface for retrieving ACLs.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Model.AclProviderInterface.html" class="more">« More »</a>
+</div>
+<div id="AuditLoggerInterface" class="element ajax clickable interface">
+<h1>AuditLoggerInterface<a href="../classes/Symfony.Component.Security.Acl.Model.AuditLoggerInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface for audit loggers</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Model.AuditLoggerInterface.html" class="more">« More »</a>
+</div>
+<div id="AuditableAclInterface" class="element ajax clickable interface">
+<h1>AuditableAclInterface<a href="../classes/Symfony.Component.Security.Acl.Model.AuditableAclInterface.html">¶</a>
+</h1>
+<p class="short_description">This interface adds auditing capabilities to the ACL.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Model.AuditableAclInterface.html" class="more">« More »</a>
+</div>
+<div id="AuditableEntryInterface" class="element ajax clickable interface">
+<h1>AuditableEntryInterface<a href="../classes/Symfony.Component.Security.Acl.Model.AuditableEntryInterface.html">¶</a>
+</h1>
+<p class="short_description">ACEs can implement this interface if they support auditing capabilities.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Model.AuditableEntryInterface.html" class="more">« More »</a>
+</div>
+<div id="DomainObjectInterface" class="element ajax clickable interface">
+<h1>DomainObjectInterface<a href="../classes/Symfony.Component.Security.Acl.Model.DomainObjectInterface.html">¶</a>
+</h1>
+<p class="short_description">This method can be implemented by domain objects which you want to store
+ACLs for if they do not have a getId() method, or getId() does not return
+a unique identifier.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Model.DomainObjectInterface.html" class="more">« More »</a>
+</div>
+<div id="EntryInterface" class="element ajax clickable interface">
+<h1>EntryInterface<a href="../classes/Symfony.Component.Security.Acl.Model.EntryInterface.html">¶</a>
+</h1>
+<p class="short_description">This class represents an individual entry in the ACL list.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Model.EntryInterface.html" class="more">« More »</a>
+</div>
+<div id="FieldEntryInterface" class="element ajax clickable interface">
+<h1>FieldEntryInterface<a href="../classes/Symfony.Component.Security.Acl.Model.FieldEntryInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface for entries which are restricted to specific fields</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Model.FieldEntryInterface.html" class="more">« More »</a>
+</div>
+<div id="MutableAclInterface" class="element ajax clickable interface">
+<h1>MutableAclInterface<a href="../classes/Symfony.Component.Security.Acl.Model.MutableAclInterface.html">¶</a>
+</h1>
+<p class="short_description">This interface adds mutators for the AclInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Model.MutableAclInterface.html" class="more">« More »</a>
+</div>
+<div id="MutableAclProviderInterface" class="element ajax clickable interface">
+<h1>MutableAclProviderInterface<a href="../classes/Symfony.Component.Security.Acl.Model.MutableAclProviderInterface.html">¶</a>
+</h1>
+<p class="short_description">Provides support for creating and storing ACL instances.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Model.MutableAclProviderInterface.html" class="more">« More »</a>
+</div>
+<div id="ObjectIdentityInterface" class="element ajax clickable interface">
+<h1>ObjectIdentityInterface<a href="../classes/Symfony.Component.Security.Acl.Model.ObjectIdentityInterface.html">¶</a>
+</h1>
+<p class="short_description">Represents the identity of an individual domain object instance.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Model.ObjectIdentityInterface.html" class="more">« More »</a>
+</div>
+<div id="ObjectIdentityRetrievalStrategyInterface" class="element ajax clickable interface">
+<h1>ObjectIdentityRetrievalStrategyInterface<a href="../classes/Symfony.Component.Security.Acl.Model.ObjectIdentityRetrievalStrategyInterface.html">¶</a>
+</h1>
+<p class="short_description">Retrieves the object identity for a given domain object</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Model.ObjectIdentityRetrievalStrategyInterface.html" class="more">« More »</a>
+</div>
+<div id="PermissionGrantingStrategyInterface" class="element ajax clickable interface">
+<h1>PermissionGrantingStrategyInterface<a href="../classes/Symfony.Component.Security.Acl.Model.PermissionGrantingStrategyInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface used by permission granting implementations.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Model.PermissionGrantingStrategyInterface.html" class="more">« More »</a>
+</div>
+<div id="SecurityIdentityInterface" class="element ajax clickable interface">
+<h1>SecurityIdentityInterface<a href="../classes/Symfony.Component.Security.Acl.Model.SecurityIdentityInterface.html">¶</a>
+</h1>
+<p class="short_description">This interface provides an additional level of indirection, so that
+we can work with abstracted versions of security objects and do
+not have to save the entire objects.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Model.SecurityIdentityInterface.html" class="more">« More »</a>
+</div>
+<div id="SecurityIdentityRetrievalStrategyInterface" class="element ajax clickable interface">
+<h1>SecurityIdentityRetrievalStrategyInterface<a href="../classes/Symfony.Component.Security.Acl.Model.SecurityIdentityRetrievalStrategyInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface for retrieving security identities from tokens</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Model.SecurityIdentityRetrievalStrategyInterface.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.html">Acl</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.Permission.html">Permission</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="PermissionMapInterface" class="element ajax clickable interface">
+<h1>PermissionMapInterface<a href="../classes/Symfony.Component.Security.Acl.Permission.PermissionMapInterface.html">¶</a>
+</h1>
+<p class="short_description">This is the interface that must be implemented by permission maps.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Permission.PermissionMapInterface.html" class="more">« More »</a>
+</div>
+<div id="BasicPermissionMap" class="element ajax clickable class">
+<h1>BasicPermissionMap<a href="../classes/Symfony.Component.Security.Acl.Permission.BasicPermissionMap.html">¶</a>
+</h1>
+<p class="short_description">This is basic permission map complements the masks which have been defined
+on the standard implementation of the MaskBuilder.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Permission.BasicPermissionMap.html" class="more">« More »</a>
+</div>
+<div id="MaskBuilder" class="element ajax clickable class">
+<h1>MaskBuilder<a href="../classes/Symfony.Component.Security.Acl.Permission.MaskBuilder.html">¶</a>
+</h1>
+<p class="short_description">This class allows you to build cumulative permissions easily, or convert
+masks to a human-readable format.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Permission.MaskBuilder.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.html">Acl</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.Voter.html">Voter</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="AclVoter" class="element ajax clickable class">
+<h1>AclVoter<a href="../classes/Symfony.Component.Security.Acl.Voter.AclVoter.html">¶</a>
+</h1>
+<p class="short_description">This voter can be used as a base class for implementing your own permissions.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Voter.AclVoter.html" class="more">« More »</a>
+</div>
+<div id="FieldVote" class="element ajax clickable class">
+<h1>FieldVote<a href="../classes/Symfony.Component.Security.Acl.Voter.FieldVote.html">¶</a>
+</h1>
+<p class="short_description">This class is a lightweight wrapper around field vote requests which does
+not violate any interface contracts.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Acl.Voter.FieldVote.html" class="more">« More »</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-11-12T19:25:21Z.<br></footer></div>
+</div>
+</body>
+</html>

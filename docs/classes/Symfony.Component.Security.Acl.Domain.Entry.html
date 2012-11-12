@@ -1,0 +1,371 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>BarnabyWalters Helpers Docs » \Symfony\Component\Security\Acl\Domain\Entry</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">BarnabyWalters Helpers Docs</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Acme.html"><i class="icon-th"></i> Acme</a></li>
+<li><a href="../namespaces/BarnabyWalters.html"><i class="icon-th"></i> BarnabyWalters</a></li>
+<li><a href="../namespaces/Symfony.html"><i class="icon-th"></i> Symfony</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">1456</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">3</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_getAcl" title="getAcl :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>getAcl()</pre></a></li>
+<li class="method public "><a href="#method_getId" title="getId :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>getId()</pre></a></li>
+<li class="method public "><a href="#method_getMask" title="getMask :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>getMask()</pre></a></li>
+<li class="method public "><a href="#method_getSecurityIdentity" title="getSecurityIdentity :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>getSecurityIdentity()</pre></a></li>
+<li class="method public "><a href="#method_getStrategy" title="getStrategy :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>getStrategy()</pre></a></li>
+<li class="method public "><a href="#method_isAuditFailure" title="isAuditFailure :: Whether auditing for successful grants is turned on"><span class="description">Whether auditing for successful grants is turned on</span><pre>isAuditFailure()</pre></a></li>
+<li class="method public "><a href="#method_isAuditSuccess" title="isAuditSuccess :: Whether auditing for successful denies is turned on"><span class="description">Whether auditing for successful denies is turned on</span><pre>isAuditSuccess()</pre></a></li>
+<li class="method public "><a href="#method_isGranting" title="isGranting :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>isGranting()</pre></a></li>
+<li class="method public "><a href="#method_serialize" title="serialize :: Implementation of \Serializable"><span class="description">Implementation of \Serializable</span><pre>serialize()</pre></a></li>
+<li class="method public "><a href="#method_setAuditFailure" title="setAuditFailure :: Turns on/off auditing on permissions denials."><span class="description">Turns on/off auditing on permissions denials.</span><pre>setAuditFailure()</pre></a></li>
+<li class="method public "><a href="#method_setAuditSuccess" title="setAuditSuccess :: Turns on/off auditing on permission grants."><span class="description">Turns on/off auditing on permission grants.</span><pre>setAuditSuccess()</pre></a></li>
+<li class="method public "><a href="#method_setMask" title="setMask :: Sets the permission mask"><span class="description">Sets the permission mask</span><pre>setMask()</pre></a></li>
+<li class="method public "><a href="#method_setStrategy" title="setStrategy :: Sets the mask comparison strategy"><span class="description">Sets the mask comparison strategy</span><pre>setStrategy()</pre></a></li>
+<li class="method public "><a href="#method_unserialize" title="unserialize :: Implementation of \Serializable"><span class="description">Implementation of \Serializable</span><pre>unserialize()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_acl" title="$acl :: "><span class="description">$acl</span><pre>$acl</pre></a></li>
+<li class="property private "><a href="#property_auditFailure" title="$auditFailure :: "><span class="description">$auditFailure</span><pre>$auditFailure</pre></a></li>
+<li class="property private "><a href="#property_auditSuccess" title="$auditSuccess :: "><span class="description">$auditSuccess</span><pre>$auditSuccess</pre></a></li>
+<li class="property private "><a href="#property_granting" title="$granting :: "><span class="description">$granting</span><pre>$granting</pre></a></li>
+<li class="property private "><a href="#property_id" title="$id :: "><span class="description">$id</span><pre>$id</pre></a></li>
+<li class="property private "><a href="#property_mask" title="$mask :: "><span class="description">$mask</span><pre>$mask</pre></a></li>
+<li class="property private "><a href="#property_securityIdentity" title="$securityIdentity :: "><span class="description">$securityIdentity</span><pre>$securityIdentity</pre></a></li>
+<li class="property private "><a href="#property_strategy" title="$strategy :: "><span class="description">$strategy</span><pre>$strategy</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Symfony\Component\Security\Acl\Domain\Entry"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.html">Acl</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.Domain.html">Domain</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Symfony.Component.Security.Acl.Domain.Entry.html">Entry</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Auditable ACE implementation</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>author</th>
+<td><a href="mailto:schmittjoh@gmail.com">Johannes M. Schmitt</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor</h2>
+<pre>__construct(integer $id, \Symfony\Component\Security\Acl\Model\AclInterface $acl, \Symfony\Component\Security\Acl\Model\SecurityIdentityInterface $sid, string $strategy, integer $mask, Boolean $granting, Boolean $auditFailure, Boolean $auditSuccess) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$acl</h4>
+<code><a href="../classes/Symfony.Component.Security.Acl.Model.AclInterface.html">\Symfony\Component\Security\Acl\Model\AclInterface</a></code>
+</div>
+<div class="subelement argument">
+<h4>$sid</h4>
+<code><a href="../classes/Symfony.Component.Security.Acl.Model.SecurityIdentityInterface.html">\Symfony\Component\Security\Acl\Model\SecurityIdentityInterface</a></code>
+</div>
+<div class="subelement argument">
+<h4>$strategy</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$mask</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$granting</h4>
+<code>Boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$auditFailure</h4>
+<code>Boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$auditSuccess</h4>
+<code>Boolean</code>
+</div>
+</div></div>
+</div>
+<a id="method_getAcl"></a><div class="element clickable method public method_getAcl" data-toggle="collapse" data-target=".method_getAcl .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>getAcl() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getId"></a><div class="element clickable method public method_getId" data-toggle="collapse" data-target=".method_getId .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>getId() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getMask"></a><div class="element clickable method public method_getMask" data-toggle="collapse" data-target=".method_getMask .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>getMask() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getSecurityIdentity"></a><div class="element clickable method public method_getSecurityIdentity" data-toggle="collapse" data-target=".method_getSecurityIdentity .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>getSecurityIdentity() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getStrategy"></a><div class="element clickable method public method_getStrategy" data-toggle="collapse" data-target=".method_getStrategy .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>getStrategy() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_isAuditFailure"></a><div class="element clickable method public method_isAuditFailure" data-toggle="collapse" data-target=".method_isAuditFailure .collapse">
+<h2>Whether auditing for successful grants is turned on</h2>
+<pre>isAuditFailure() : Boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>Boolean</code></div>
+</div></div>
+</div>
+<a id="method_isAuditSuccess"></a><div class="element clickable method public method_isAuditSuccess" data-toggle="collapse" data-target=".method_isAuditSuccess .collapse">
+<h2>Whether auditing for successful denies is turned on</h2>
+<pre>isAuditSuccess() : Boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>Boolean</code></div>
+</div></div>
+</div>
+<a id="method_isGranting"></a><div class="element clickable method public method_isGranting" data-toggle="collapse" data-target=".method_isGranting .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>isGranting() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_serialize"></a><div class="element clickable method public method_serialize" data-toggle="collapse" data-target=".method_serialize .collapse">
+<h2>Implementation of \Serializable</h2>
+<pre>serialize() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_setAuditFailure"></a><div class="element clickable method public method_setAuditFailure" data-toggle="collapse" data-target=".method_setAuditFailure .collapse">
+<h2>Turns on/off auditing on permissions denials.</h2>
+<pre>setAuditFailure(Boolean $boolean) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Do never call this method directly. Use the respective methods on the
+AclInterface instead.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$boolean</h4>
+<code>Boolean</code>
+</div>
+</div></div>
+</div>
+<a id="method_setAuditSuccess"></a><div class="element clickable method public method_setAuditSuccess" data-toggle="collapse" data-target=".method_setAuditSuccess .collapse">
+<h2>Turns on/off auditing on permission grants.</h2>
+<pre>setAuditSuccess(Boolean $boolean) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Do never call this method directly. Use the respective methods on the
+AclInterface instead.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$boolean</h4>
+<code>Boolean</code>
+</div>
+</div></div>
+</div>
+<a id="method_setMask"></a><div class="element clickable method public method_setMask" data-toggle="collapse" data-target=".method_setMask .collapse">
+<h2>Sets the permission mask</h2>
+<pre>setMask(integer $mask) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Do never call this method directly. Use the respective methods on the
+AclInterface instead.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$mask</h4>
+<code>integer</code>
+</div>
+</div></div>
+</div>
+<a id="method_setStrategy"></a><div class="element clickable method public method_setStrategy" data-toggle="collapse" data-target=".method_setStrategy .collapse">
+<h2>Sets the mask comparison strategy</h2>
+<pre>setStrategy(string $strategy) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Do never call this method directly. Use the respective methods on the
+AclInterface instead.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$strategy</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_unserialize"></a><div class="element clickable method public method_unserialize" data-toggle="collapse" data-target=".method_unserialize .collapse">
+<h2>Implementation of \Serializable</h2>
+<pre>unserialize(string $serialized) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$serialized</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_acl"> </a><div class="element clickable property private property_acl" data-toggle="collapse" data-target=".property_acl .collapse">
+<h2>$acl</h2>
+<pre>$acl </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_auditFailure"> </a><div class="element clickable property private property_auditFailure" data-toggle="collapse" data-target=".property_auditFailure .collapse">
+<h2>$auditFailure</h2>
+<pre>$auditFailure </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_auditSuccess"> </a><div class="element clickable property private property_auditSuccess" data-toggle="collapse" data-target=".property_auditSuccess .collapse">
+<h2>$auditSuccess</h2>
+<pre>$auditSuccess </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_granting"> </a><div class="element clickable property private property_granting" data-toggle="collapse" data-target=".property_granting .collapse">
+<h2>$granting</h2>
+<pre>$granting </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_id"> </a><div class="element clickable property private property_id" data-toggle="collapse" data-target=".property_id .collapse">
+<h2>$id</h2>
+<pre>$id </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_mask"> </a><div class="element clickable property private property_mask" data-toggle="collapse" data-target=".property_mask .collapse">
+<h2>$mask</h2>
+<pre>$mask </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_securityIdentity"> </a><div class="element clickable property private property_securityIdentity" data-toggle="collapse" data-target=".property_securityIdentity .collapse">
+<h2>$securityIdentity</h2>
+<pre>$securityIdentity </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_strategy"> </a><div class="element clickable property private property_strategy" data-toggle="collapse" data-target=".property_strategy .collapse">
+<h2>$strategy</h2>
+<pre>$strategy </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-11-12T19:25:24Z.<br></footer></div>
+</div>
+</body>
+</html>

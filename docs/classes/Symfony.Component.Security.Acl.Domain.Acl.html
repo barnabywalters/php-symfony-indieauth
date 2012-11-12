@@ -1,0 +1,957 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>BarnabyWalters Helpers Docs » \Symfony\Component\Security\Acl\Domain\Acl</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">BarnabyWalters Helpers Docs</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Acme.html"><i class="icon-th"></i> Acme</a></li>
+<li><a href="../namespaces/BarnabyWalters.html"><i class="icon-th"></i> BarnabyWalters</a></li>
+<li><a href="../namespaces/Symfony.html"><i class="icon-th"></i> Symfony</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">1456</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">3</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_addPropertyChangedListener" title="addPropertyChangedListener :: Adds a property changed listener"><span class="description">Adds a property changed listener</span><pre>addPropertyChangedListener()</pre></a></li>
+<li class="method public "><a href="#method_deleteClassAce" title="deleteClassAce :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>deleteClassAce()</pre></a></li>
+<li class="method public "><a href="#method_deleteClassFieldAce" title="deleteClassFieldAce :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>deleteClassFieldAce()</pre></a></li>
+<li class="method public "><a href="#method_deleteObjectAce" title="deleteObjectAce :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>deleteObjectAce()</pre></a></li>
+<li class="method public "><a href="#method_deleteObjectFieldAce" title="deleteObjectFieldAce :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>deleteObjectFieldAce()</pre></a></li>
+<li class="method public "><a href="#method_getClassAces" title="getClassAces :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>getClassAces()</pre></a></li>
+<li class="method public "><a href="#method_getClassFieldAces" title="getClassFieldAces :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>getClassFieldAces()</pre></a></li>
+<li class="method public "><a href="#method_getId" title="getId :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>getId()</pre></a></li>
+<li class="method public "><a href="#method_getObjectAces" title="getObjectAces :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>getObjectAces()</pre></a></li>
+<li class="method public "><a href="#method_getObjectFieldAces" title="getObjectFieldAces :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>getObjectFieldAces()</pre></a></li>
+<li class="method public "><a href="#method_getObjectIdentity" title="getObjectIdentity :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>getObjectIdentity()</pre></a></li>
+<li class="method public "><a href="#method_getParentAcl" title="getParentAcl :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>getParentAcl()</pre></a></li>
+<li class="method public "><a href="#method_insertClassAce" title="insertClassAce :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>insertClassAce()</pre></a></li>
+<li class="method public "><a href="#method_insertClassFieldAce" title="insertClassFieldAce :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>insertClassFieldAce()</pre></a></li>
+<li class="method public "><a href="#method_insertObjectAce" title="insertObjectAce :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>insertObjectAce()</pre></a></li>
+<li class="method public "><a href="#method_insertObjectFieldAce" title="insertObjectFieldAce :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>insertObjectFieldAce()</pre></a></li>
+<li class="method public "><a href="#method_isEntriesInheriting" title="isEntriesInheriting :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>isEntriesInheriting()</pre></a></li>
+<li class="method public "><a href="#method_isFieldGranted" title="isFieldGranted :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>isFieldGranted()</pre></a></li>
+<li class="method public "><a href="#method_isGranted" title="isGranted :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>isGranted()</pre></a></li>
+<li class="method public "><a href="#method_isSidLoaded" title="isSidLoaded :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>isSidLoaded()</pre></a></li>
+<li class="method public "><a href="#method_serialize" title="serialize :: Implementation for the \Serializable interface"><span class="description">Implementation for the \Serializable interface</span><pre>serialize()</pre></a></li>
+<li class="method public "><a href="#method_setEntriesInheriting" title="setEntriesInheriting :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>setEntriesInheriting()</pre></a></li>
+<li class="method public "><a href="#method_setParentAcl" title="setParentAcl :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>setParentAcl()</pre></a></li>
+<li class="method public "><a href="#method_unserialize" title="unserialize :: Implementation for the \Serializable interface"><span class="description">Implementation for the \Serializable interface</span><pre>unserialize()</pre></a></li>
+<li class="method public "><a href="#method_updateClassAce" title="updateClassAce :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>updateClassAce()</pre></a></li>
+<li class="method public "><a href="#method_updateClassAuditing" title="updateClassAuditing :: Updates auditing for class-based ACE"><span class="description">Updates auditing for class-based ACE</span><pre>updateClassAuditing()</pre></a></li>
+<li class="method public "><a href="#method_updateClassFieldAce" title="updateClassFieldAce :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>updateClassFieldAce()</pre></a></li>
+<li class="method public "><a href="#method_updateClassFieldAuditing" title="updateClassFieldAuditing :: Updates auditing for class-field-based ACE"><span class="description">Updates auditing for class-field-based ACE</span><pre>updateClassFieldAuditing()</pre></a></li>
+<li class="method public "><a href="#method_updateObjectAce" title="updateObjectAce :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>updateObjectAce()</pre></a></li>
+<li class="method public "><a href="#method_updateObjectAuditing" title="updateObjectAuditing :: Updates auditing for object-based ACE"><span class="description">Updates auditing for object-based ACE</span><pre>updateObjectAuditing()</pre></a></li>
+<li class="method public "><a href="#method_updateObjectFieldAce" title="updateObjectFieldAce :: {@inheritDoc}"><span class="description">{@inheritDoc}</span><pre>updateObjectFieldAce()</pre></a></li>
+<li class="method public "><a href="#method_updateObjectFieldAuditing" title="updateObjectFieldAuditing :: Updates auditing for object-field-based ACE"><span class="description">Updates auditing for object-field-based ACE</span><pre>updateObjectFieldAuditing()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="method private "><a href="#method_deleteAce" title="deleteAce :: Deletes an ACE"><span class="description">Deletes an ACE</span><pre>deleteAce()</pre></a></li>
+<li class="method private "><a href="#method_deleteFieldAce" title="deleteFieldAce :: Deletes a field-based ACE"><span class="description">Deletes a field-based ACE</span><pre>deleteFieldAce()</pre></a></li>
+<li class="method private "><a href="#method_insertAce" title="insertAce :: Inserts an ACE"><span class="description">Inserts an ACE</span><pre>insertAce()</pre></a></li>
+<li class="method private "><a href="#method_insertFieldAce" title="insertFieldAce :: Inserts a field-based ACE"><span class="description">Inserts a field-based ACE</span><pre>insertFieldAce()</pre></a></li>
+<li class="method private "><a href="#method_onEntryPropertyChanged" title="onEntryPropertyChanged :: Called when a property of an ACE associated with this ACL changes"><span class="description">Called when a property of an ACE associated with this ACL changes</span><pre>onEntryPropertyChanged()</pre></a></li>
+<li class="method private "><a href="#method_onPropertyChanged" title="onPropertyChanged :: Called when a property of the ACL changes"><span class="description">Called when a property of the ACL changes</span><pre>onPropertyChanged()</pre></a></li>
+<li class="method private "><a href="#method_updateAce" title="updateAce :: Updates an ACE"><span class="description">Updates an ACE</span><pre>updateAce()</pre></a></li>
+<li class="method private "><a href="#method_updateAuditing" title="updateAuditing :: Updates auditing for an ACE"><span class="description">Updates auditing for an ACE</span><pre>updateAuditing()</pre></a></li>
+<li class="method private "><a href="#method_updateFieldAce" title="updateFieldAce :: Updates a field-based ACE"><span class="description">Updates a field-based ACE</span><pre>updateFieldAce()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_classAces" title="$classAces :: "><span class="description">$classAces</span><pre>$classAces</pre></a></li>
+<li class="property private "><a href="#property_classFieldAces" title="$classFieldAces :: "><span class="description">$classFieldAces</span><pre>$classFieldAces</pre></a></li>
+<li class="property private "><a href="#property_entriesInheriting" title="$entriesInheriting :: "><span class="description">$entriesInheriting</span><pre>$entriesInheriting</pre></a></li>
+<li class="property private "><a href="#property_id" title="$id :: "><span class="description">$id</span><pre>$id</pre></a></li>
+<li class="property private "><a href="#property_listeners" title="$listeners :: "><span class="description">$listeners</span><pre>$listeners</pre></a></li>
+<li class="property private "><a href="#property_loadedSids" title="$loadedSids :: "><span class="description">$loadedSids</span><pre>$loadedSids</pre></a></li>
+<li class="property private "><a href="#property_objectAces" title="$objectAces :: "><span class="description">$objectAces</span><pre>$objectAces</pre></a></li>
+<li class="property private "><a href="#property_objectFieldAces" title="$objectFieldAces :: "><span class="description">$objectFieldAces</span><pre>$objectFieldAces</pre></a></li>
+<li class="property private "><a href="#property_objectIdentity" title="$objectIdentity :: "><span class="description">$objectIdentity</span><pre>$objectIdentity</pre></a></li>
+<li class="property private "><a href="#property_parentAcl" title="$parentAcl :: "><span class="description">$parentAcl</span><pre>$parentAcl</pre></a></li>
+<li class="property private "><a href="#property_permissionGrantingStrategy" title="$permissionGrantingStrategy :: "><span class="description">$permissionGrantingStrategy</span><pre>$permissionGrantingStrategy</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Symfony\Component\Security\Acl\Domain\Acl"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.html">Acl</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Acl.Domain.html">Domain</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Symfony.Component.Security.Acl.Domain.Acl.html">Acl</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">An ACL implementation.</p>
+<div class="details">
+<div class="long_description"><p>Each object identity has exactly one associated ACL. Each ACL can have four
+different types of ACEs (class ACEs, object ACEs, class field ACEs, object field
+ACEs).</p>
+
+<p>You should not iterate over the ACEs yourself, but instead use isGranted(),
+or isFieldGranted(). These will utilize an implementation of PermissionGrantingStrategy
+internally.</p></div>
+<table class="table table-bordered"><tr>
+<th>author</th>
+<td><a href="mailto:schmittjoh@gmail.com">Johannes M. Schmitt</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor</h2>
+<pre>__construct(integer $id, \Symfony\Component\Security\Acl\Model\ObjectIdentityInterface $objectIdentity, \Symfony\Component\Security\Acl\Model\PermissionGrantingStrategyInterface $permissionGrantingStrategy, array $loadedSids, Boolean $entriesInheriting) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$objectIdentity</h4>
+<code><a href="../classes/Symfony.Component.Security.Acl.Model.ObjectIdentityInterface.html">\Symfony\Component\Security\Acl\Model\ObjectIdentityInterface</a></code>
+</div>
+<div class="subelement argument">
+<h4>$permissionGrantingStrategy</h4>
+<code><a href="../classes/Symfony.Component.Security.Acl.Model.PermissionGrantingStrategyInterface.html">\Symfony\Component\Security\Acl\Model\PermissionGrantingStrategyInterface</a></code>
+</div>
+<div class="subelement argument">
+<h4>$loadedSids</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$entriesInheriting</h4>
+<code>Boolean</code>
+</div>
+</div></div>
+</div>
+<a id="method_addPropertyChangedListener"></a><div class="element clickable method public method_addPropertyChangedListener" data-toggle="collapse" data-target=".method_addPropertyChangedListener .collapse">
+<h2>Adds a property changed listener</h2>
+<pre>addPropertyChangedListener(\Doctrine\Common\PropertyChangedListener $listener) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$listener</h4>
+<code>\Doctrine\Common\PropertyChangedListener</code>
+</div>
+</div></div>
+</div>
+<a id="method_deleteClassAce"></a><div class="element clickable method public method_deleteClassAce" data-toggle="collapse" data-target=".method_deleteClassAce .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>deleteClassAce($index) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$index</h4></div>
+</div></div>
+</div>
+<a id="method_deleteClassFieldAce"></a><div class="element clickable method public method_deleteClassFieldAce" data-toggle="collapse" data-target=".method_deleteClassFieldAce .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>deleteClassFieldAce($index, $field) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$index</h4></div>
+<div class="subelement argument"><h4>$field</h4></div>
+</div></div>
+</div>
+<a id="method_deleteObjectAce"></a><div class="element clickable method public method_deleteObjectAce" data-toggle="collapse" data-target=".method_deleteObjectAce .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>deleteObjectAce($index) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$index</h4></div>
+</div></div>
+</div>
+<a id="method_deleteObjectFieldAce"></a><div class="element clickable method public method_deleteObjectFieldAce" data-toggle="collapse" data-target=".method_deleteObjectFieldAce .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>deleteObjectFieldAce($index, $field) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$index</h4></div>
+<div class="subelement argument"><h4>$field</h4></div>
+</div></div>
+</div>
+<a id="method_getClassAces"></a><div class="element clickable method public method_getClassAces" data-toggle="collapse" data-target=".method_getClassAces .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>getClassAces() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getClassFieldAces"></a><div class="element clickable method public method_getClassFieldAces" data-toggle="collapse" data-target=".method_getClassFieldAces .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>getClassFieldAces($field) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$field</h4></div>
+</div></div>
+</div>
+<a id="method_getId"></a><div class="element clickable method public method_getId" data-toggle="collapse" data-target=".method_getId .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>getId() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getObjectAces"></a><div class="element clickable method public method_getObjectAces" data-toggle="collapse" data-target=".method_getObjectAces .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>getObjectAces() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getObjectFieldAces"></a><div class="element clickable method public method_getObjectFieldAces" data-toggle="collapse" data-target=".method_getObjectFieldAces .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>getObjectFieldAces($field) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$field</h4></div>
+</div></div>
+</div>
+<a id="method_getObjectIdentity"></a><div class="element clickable method public method_getObjectIdentity" data-toggle="collapse" data-target=".method_getObjectIdentity .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>getObjectIdentity() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getParentAcl"></a><div class="element clickable method public method_getParentAcl" data-toggle="collapse" data-target=".method_getParentAcl .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>getParentAcl() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_insertClassAce"></a><div class="element clickable method public method_insertClassAce" data-toggle="collapse" data-target=".method_insertClassAce .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>insertClassAce(\Symfony\Component\Security\Acl\Model\SecurityIdentityInterface $sid, $mask, $index, $granting, $strategy) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$sid</h4></div>
+<div class="subelement argument"><h4>$mask</h4></div>
+<div class="subelement argument"><h4>$index</h4></div>
+<div class="subelement argument"><h4>$granting</h4></div>
+<div class="subelement argument"><h4>$strategy</h4></div>
+</div></div>
+</div>
+<a id="method_insertClassFieldAce"></a><div class="element clickable method public method_insertClassFieldAce" data-toggle="collapse" data-target=".method_insertClassFieldAce .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>insertClassFieldAce($field, \Symfony\Component\Security\Acl\Model\SecurityIdentityInterface $sid, $mask, $index, $granting, $strategy) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$field</h4></div>
+<div class="subelement argument"><h4>$sid</h4></div>
+<div class="subelement argument"><h4>$mask</h4></div>
+<div class="subelement argument"><h4>$index</h4></div>
+<div class="subelement argument"><h4>$granting</h4></div>
+<div class="subelement argument"><h4>$strategy</h4></div>
+</div></div>
+</div>
+<a id="method_insertObjectAce"></a><div class="element clickable method public method_insertObjectAce" data-toggle="collapse" data-target=".method_insertObjectAce .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>insertObjectAce(\Symfony\Component\Security\Acl\Model\SecurityIdentityInterface $sid, $mask, $index, $granting, $strategy) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$sid</h4></div>
+<div class="subelement argument"><h4>$mask</h4></div>
+<div class="subelement argument"><h4>$index</h4></div>
+<div class="subelement argument"><h4>$granting</h4></div>
+<div class="subelement argument"><h4>$strategy</h4></div>
+</div></div>
+</div>
+<a id="method_insertObjectFieldAce"></a><div class="element clickable method public method_insertObjectFieldAce" data-toggle="collapse" data-target=".method_insertObjectFieldAce .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>insertObjectFieldAce($field, \Symfony\Component\Security\Acl\Model\SecurityIdentityInterface $sid, $mask, $index, $granting, $strategy) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$field</h4></div>
+<div class="subelement argument"><h4>$sid</h4></div>
+<div class="subelement argument"><h4>$mask</h4></div>
+<div class="subelement argument"><h4>$index</h4></div>
+<div class="subelement argument"><h4>$granting</h4></div>
+<div class="subelement argument"><h4>$strategy</h4></div>
+</div></div>
+</div>
+<a id="method_isEntriesInheriting"></a><div class="element clickable method public method_isEntriesInheriting" data-toggle="collapse" data-target=".method_isEntriesInheriting .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>isEntriesInheriting() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_isFieldGranted"></a><div class="element clickable method public method_isFieldGranted" data-toggle="collapse" data-target=".method_isFieldGranted .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>isFieldGranted($field, array $masks, array $securityIdentities, $administrativeMode) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$field</h4></div>
+<div class="subelement argument"><h4>$masks</h4></div>
+<div class="subelement argument"><h4>$securityIdentities</h4></div>
+<div class="subelement argument"><h4>$administrativeMode</h4></div>
+</div></div>
+</div>
+<a id="method_isGranted"></a><div class="element clickable method public method_isGranted" data-toggle="collapse" data-target=".method_isGranted .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>isGranted(array $masks, array $securityIdentities, $administrativeMode) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$masks</h4></div>
+<div class="subelement argument"><h4>$securityIdentities</h4></div>
+<div class="subelement argument"><h4>$administrativeMode</h4></div>
+</div></div>
+</div>
+<a id="method_isSidLoaded"></a><div class="element clickable method public method_isSidLoaded" data-toggle="collapse" data-target=".method_isSidLoaded .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>isSidLoaded($sids) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$sids</h4></div>
+</div></div>
+</div>
+<a id="method_serialize"></a><div class="element clickable method public method_serialize" data-toggle="collapse" data-target=".method_serialize .collapse">
+<h2>Implementation for the \Serializable interface</h2>
+<pre>serialize() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_setEntriesInheriting"></a><div class="element clickable method public method_setEntriesInheriting" data-toggle="collapse" data-target=".method_setEntriesInheriting .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>setEntriesInheriting($boolean) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$boolean</h4></div>
+</div></div>
+</div>
+<a id="method_setParentAcl"></a><div class="element clickable method public method_setParentAcl" data-toggle="collapse" data-target=".method_setParentAcl .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>setParentAcl(\Symfony\Component\Security\Acl\Model\AclInterface $acl) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$acl</h4></div>
+</div></div>
+</div>
+<a id="method_unserialize"></a><div class="element clickable method public method_unserialize" data-toggle="collapse" data-target=".method_unserialize .collapse">
+<h2>Implementation for the \Serializable interface</h2>
+<pre>unserialize(string $serialized) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$serialized</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_updateClassAce"></a><div class="element clickable method public method_updateClassAce" data-toggle="collapse" data-target=".method_updateClassAce .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>updateClassAce($index, $mask, $strategy) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$index</h4></div>
+<div class="subelement argument"><h4>$mask</h4></div>
+<div class="subelement argument"><h4>$strategy</h4></div>
+</div></div>
+</div>
+<a id="method_updateClassAuditing"></a><div class="element clickable method public method_updateClassAuditing" data-toggle="collapse" data-target=".method_updateClassAuditing .collapse">
+<h2>Updates auditing for class-based ACE</h2>
+<pre>updateClassAuditing(integer $index, Boolean $auditSuccess, Boolean $auditFailure) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$auditSuccess</h4>
+<code>Boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$auditFailure</h4>
+<code>Boolean</code>
+</div>
+</div></div>
+</div>
+<a id="method_updateClassFieldAce"></a><div class="element clickable method public method_updateClassFieldAce" data-toggle="collapse" data-target=".method_updateClassFieldAce .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>updateClassFieldAce($index, $field, $mask, $strategy) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$index</h4></div>
+<div class="subelement argument"><h4>$field</h4></div>
+<div class="subelement argument"><h4>$mask</h4></div>
+<div class="subelement argument"><h4>$strategy</h4></div>
+</div></div>
+</div>
+<a id="method_updateClassFieldAuditing"></a><div class="element clickable method public method_updateClassFieldAuditing" data-toggle="collapse" data-target=".method_updateClassFieldAuditing .collapse">
+<h2>Updates auditing for class-field-based ACE</h2>
+<pre>updateClassFieldAuditing(integer $index, string $field, Boolean $auditSuccess, Boolean $auditFailure) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$auditSuccess</h4>
+<code>Boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$auditFailure</h4>
+<code>Boolean</code>
+</div>
+</div></div>
+</div>
+<a id="method_updateObjectAce"></a><div class="element clickable method public method_updateObjectAce" data-toggle="collapse" data-target=".method_updateObjectAce .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>updateObjectAce($index, $mask, $strategy) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$index</h4></div>
+<div class="subelement argument"><h4>$mask</h4></div>
+<div class="subelement argument"><h4>$strategy</h4></div>
+</div></div>
+</div>
+<a id="method_updateObjectAuditing"></a><div class="element clickable method public method_updateObjectAuditing" data-toggle="collapse" data-target=".method_updateObjectAuditing .collapse">
+<h2>Updates auditing for object-based ACE</h2>
+<pre>updateObjectAuditing(integer $index, Boolean $auditSuccess, Boolean $auditFailure) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$auditSuccess</h4>
+<code>Boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$auditFailure</h4>
+<code>Boolean</code>
+</div>
+</div></div>
+</div>
+<a id="method_updateObjectFieldAce"></a><div class="element clickable method public method_updateObjectFieldAce" data-toggle="collapse" data-target=".method_updateObjectFieldAce .collapse">
+<h2>{@inheritDoc}</h2>
+<pre>updateObjectFieldAce($index, $field, $mask, $strategy) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$index</h4></div>
+<div class="subelement argument"><h4>$field</h4></div>
+<div class="subelement argument"><h4>$mask</h4></div>
+<div class="subelement argument"><h4>$strategy</h4></div>
+</div></div>
+</div>
+<a id="method_updateObjectFieldAuditing"></a><div class="element clickable method public method_updateObjectFieldAuditing" data-toggle="collapse" data-target=".method_updateObjectFieldAuditing .collapse">
+<h2>Updates auditing for object-field-based ACE</h2>
+<pre>updateObjectFieldAuditing(integer $index, string $field, Boolean $auditSuccess, Boolean $auditFailure) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$auditSuccess</h4>
+<code>Boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$auditFailure</h4>
+<code>Boolean</code>
+</div>
+</div></div>
+</div>
+<a id="method_deleteAce"></a><div class="element clickable method private method_deleteAce" data-toggle="collapse" data-target=".method_deleteAce .collapse">
+<h2>Deletes an ACE</h2>
+<pre>deleteAce(string $property, integer $index) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.outofboundsexception.php">\OutOfBoundsException</a></code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_deleteFieldAce"></a><div class="element clickable method private method_deleteFieldAce" data-toggle="collapse" data-target=".method_deleteFieldAce .collapse">
+<h2>Deletes a field-based ACE</h2>
+<pre>deleteFieldAce(string $property, integer $index, string $field) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.outofboundsexception.php">\OutOfBoundsException</a></code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_insertAce"></a><div class="element clickable method private method_insertAce" data-toggle="collapse" data-target=".method_insertAce .collapse">
+<h2>Inserts an ACE</h2>
+<pre>insertAce(string $property, integer $index, integer $mask, \Symfony\Component\Security\Acl\Model\SecurityIdentityInterface $sid, Boolean $granting, string $strategy) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$mask</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$sid</h4>
+<code><a href="../classes/Symfony.Component.Security.Acl.Model.SecurityIdentityInterface.html">\Symfony\Component\Security\Acl\Model\SecurityIdentityInterface</a></code>
+</div>
+<div class="subelement argument">
+<h4>$granting</h4>
+<code>Boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$strategy</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="http://php.net/manual/en/class.outofboundsexception.php">\OutOfBoundsException</a></code></th>
+<td></td>
+</tr>
+<tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td></td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_insertFieldAce"></a><div class="element clickable method private method_insertFieldAce" data-toggle="collapse" data-target=".method_insertFieldAce .collapse">
+<h2>Inserts a field-based ACE</h2>
+<pre>insertFieldAce(string $property, integer $index, string $field, integer $mask, \Symfony\Component\Security\Acl\Model\SecurityIdentityInterface $sid, Boolean $granting, string $strategy) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$mask</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$sid</h4>
+<code><a href="../classes/Symfony.Component.Security.Acl.Model.SecurityIdentityInterface.html">\Symfony\Component\Security\Acl\Model\SecurityIdentityInterface</a></code>
+</div>
+<div class="subelement argument">
+<h4>$granting</h4>
+<code>Boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$strategy</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td></td>
+</tr>
+<tr>
+<th><code><a href="http://php.net/manual/en/class.outofboundsexception.php">\OutOfBoundsException</a></code></th>
+<td></td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_onEntryPropertyChanged"></a><div class="element clickable method private method_onEntryPropertyChanged" data-toggle="collapse" data-target=".method_onEntryPropertyChanged .collapse">
+<h2>Called when a property of an ACE associated with this ACL changes</h2>
+<pre>onEntryPropertyChanged(\Symfony\Component\Security\Acl\Model\EntryInterface $entry, string $name, mixed $oldValue, mixed $newValue) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$entry</h4>
+<code><a href="../classes/Symfony.Component.Security.Acl.Model.EntryInterface.html">\Symfony\Component\Security\Acl\Model\EntryInterface</a></code>
+</div>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$oldValue</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$newValue</h4>
+<code>mixed</code>
+</div>
+</div></div>
+</div>
+<a id="method_onPropertyChanged"></a><div class="element clickable method private method_onPropertyChanged" data-toggle="collapse" data-target=".method_onPropertyChanged .collapse">
+<h2>Called when a property of the ACL changes</h2>
+<pre>onPropertyChanged(string $name, mixed $oldValue, mixed $newValue) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$oldValue</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$newValue</h4>
+<code>mixed</code>
+</div>
+</div></div>
+</div>
+<a id="method_updateAce"></a><div class="element clickable method private method_updateAce" data-toggle="collapse" data-target=".method_updateAce .collapse">
+<h2>Updates an ACE</h2>
+<pre>updateAce(string $property, integer $index, integer $mask, string $strategy) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$mask</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$strategy</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.outofboundsexception.php">\OutOfBoundsException</a></code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_updateAuditing"></a><div class="element clickable method private method_updateAuditing" data-toggle="collapse" data-target=".method_updateAuditing .collapse">
+<h2>Updates auditing for an ACE</h2>
+<pre>updateAuditing(array $aces, integer $index, Boolean $auditSuccess, Boolean $auditFailure) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$aces</h4>
+<code>array</code><p>&$aces</p>
+</div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$auditSuccess</h4>
+<code>Boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$auditFailure</h4>
+<code>Boolean</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.outofboundsexception.php">\OutOfBoundsException</a></code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_updateFieldAce"></a><div class="element clickable method private method_updateFieldAce" data-toggle="collapse" data-target=".method_updateFieldAce .collapse">
+<h2>Updates a field-based ACE</h2>
+<pre>updateFieldAce(string $property, integer $index, string $field, integer $mask, string $strategy) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$mask</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$strategy</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td></td>
+</tr>
+<tr>
+<th><code><a href="http://php.net/manual/en/class.outofboundsexception.php">\OutOfBoundsException</a></code></th>
+<td></td>
+</tr>
+</table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_classAces"> </a><div class="element clickable property private property_classAces" data-toggle="collapse" data-target=".property_classAces .collapse">
+<h2>$classAces</h2>
+<pre>$classAces </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_classFieldAces"> </a><div class="element clickable property private property_classFieldAces" data-toggle="collapse" data-target=".property_classFieldAces .collapse">
+<h2>$classFieldAces</h2>
+<pre>$classFieldAces </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_entriesInheriting"> </a><div class="element clickable property private property_entriesInheriting" data-toggle="collapse" data-target=".property_entriesInheriting .collapse">
+<h2>$entriesInheriting</h2>
+<pre>$entriesInheriting </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_id"> </a><div class="element clickable property private property_id" data-toggle="collapse" data-target=".property_id .collapse">
+<h2>$id</h2>
+<pre>$id </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_listeners"> </a><div class="element clickable property private property_listeners" data-toggle="collapse" data-target=".property_listeners .collapse">
+<h2>$listeners</h2>
+<pre>$listeners </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_loadedSids"> </a><div class="element clickable property private property_loadedSids" data-toggle="collapse" data-target=".property_loadedSids .collapse">
+<h2>$loadedSids</h2>
+<pre>$loadedSids </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_objectAces"> </a><div class="element clickable property private property_objectAces" data-toggle="collapse" data-target=".property_objectAces .collapse">
+<h2>$objectAces</h2>
+<pre>$objectAces </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_objectFieldAces"> </a><div class="element clickable property private property_objectFieldAces" data-toggle="collapse" data-target=".property_objectFieldAces .collapse">
+<h2>$objectFieldAces</h2>
+<pre>$objectFieldAces </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_objectIdentity"> </a><div class="element clickable property private property_objectIdentity" data-toggle="collapse" data-target=".property_objectIdentity .collapse">
+<h2>$objectIdentity</h2>
+<pre>$objectIdentity </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_parentAcl"> </a><div class="element clickable property private property_parentAcl" data-toggle="collapse" data-target=".property_parentAcl .collapse">
+<h2>$parentAcl</h2>
+<pre>$parentAcl </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_permissionGrantingStrategy"> </a><div class="element clickable property private property_permissionGrantingStrategy" data-toggle="collapse" data-target=".property_permissionGrantingStrategy .collapse">
+<h2>$permissionGrantingStrategy</h2>
+<pre>$permissionGrantingStrategy </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-11-12T19:25:23Z.<br></footer></div>
+</div>
+</body>
+</html>

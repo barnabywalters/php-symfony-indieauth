@@ -1,0 +1,648 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>BarnabyWalters Helpers Docs » Symfony\Component\Security\Http</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">BarnabyWalters Helpers Docs</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Acme.html"><i class="icon-th"></i> Acme</a></li>
+<li><a href="../namespaces/BarnabyWalters.html"><i class="icon-th"></i> BarnabyWalters</a></li>
+<li><a href="../namespaces/Symfony.html"><i class="icon-th"></i> Symfony</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">1456</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">3</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Namespaces</li>
+<li>
+<a href="../namespaces/Symfony.Component.Security.Http.html" title="Http"><i class="icon-th"></i>Http</a><ul class="nav nav-list nav-namespaces">
+<li>
+<a href="../namespaces/Symfony.Component.Security.Http.Authentication.html" title="Authentication"><i class="icon-th"></i>Authentication</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Symfony.Component.Security.Http.Authorization.html" title="Authorization"><i class="icon-th"></i>Authorization</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Symfony.Component.Security.Http.EntryPoint.html" title="EntryPoint"><i class="icon-th"></i>EntryPoint</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Symfony.Component.Security.Http.Event.html" title="Event"><i class="icon-th"></i>Event</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Symfony.Component.Security.Http.Firewall.html" title="Firewall"><i class="icon-th"></i>Firewall</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Symfony.Component.Security.Http.Logout.html" title="Logout"><i class="icon-th"></i>Logout</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Symfony.Component.Security.Http.RememberMe.html" title="RememberMe"><i class="icon-th"></i>RememberMe</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Symfony.Component.Security.Http.Session.html" title="Session"><i class="icon-th"></i>Session</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8 namespace-contents">
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Http.html">Http</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="AccessMapInterface" class="element ajax clickable interface">
+<h1>AccessMapInterface<a href="../classes/Symfony.Component.Security.Http.AccessMapInterface.html">¶</a>
+</h1>
+<p class="short_description">AccessMap allows configuration of different access control rules for
+specific parts of the website.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.AccessMapInterface.html" class="more">« More »</a>
+</div>
+<div id="FirewallMapInterface" class="element ajax clickable interface">
+<h1>FirewallMapInterface<a href="../classes/Symfony.Component.Security.Http.FirewallMapInterface.html">¶</a>
+</h1>
+<p class="short_description">This interface must be implemented by firewall maps.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.FirewallMapInterface.html" class="more">« More »</a>
+</div>
+<div id="AccessMap" class="element ajax clickable class">
+<h1>AccessMap<a href="../classes/Symfony.Component.Security.Http.AccessMap.html">¶</a>
+</h1>
+<p class="short_description">AccessMap allows configuration of different access control rules for
+specific parts of the website.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.AccessMap.html" class="more">« More »</a>
+</div>
+<div id="Firewall" class="element ajax clickable class">
+<h1>Firewall<a href="../classes/Symfony.Component.Security.Http.Firewall.html">¶</a>
+</h1>
+<p class="short_description">Firewall uses a FirewallMap to register security listeners for the given
+request.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Firewall.html" class="more">« More »</a>
+</div>
+<div id="FirewallMap" class="element ajax clickable class">
+<h1>FirewallMap<a href="../classes/Symfony.Component.Security.Http.FirewallMap.html">¶</a>
+</h1>
+<p class="short_description">FirewallMap allows configuration of different firewalls for specific parts
+of the website.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.FirewallMap.html" class="more">« More »</a>
+</div>
+<div id="HttpUtils" class="element ajax clickable class">
+<h1>HttpUtils<a href="../classes/Symfony.Component.Security.Http.HttpUtils.html">¶</a>
+</h1>
+<p class="short_description">Encapsulates the logic needed to create sub-requests, redirect the user, and match URLs.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.HttpUtils.html" class="more">« More »</a>
+</div>
+<div id="SecurityEvents" class="element ajax clickable class">
+<h1>SecurityEvents<a href="../classes/Symfony.Component.Security.Http.SecurityEvents.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.SecurityEvents.html" class="more">« More »</a>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Http.html">Http</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Http.Authentication.html">Authentication</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="AuthenticationFailureHandlerInterface" class="element ajax clickable interface">
+<h1>AuthenticationFailureHandlerInterface<a href="../classes/Symfony.Component.Security.Http.Authentication.AuthenticationFailureHandlerInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface for custom authentication failure handlers.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Authentication.AuthenticationFailureHandlerInterface.html" class="more">« More »</a>
+</div>
+<div id="AuthenticationSuccessHandlerInterface" class="element ajax clickable interface">
+<h1>AuthenticationSuccessHandlerInterface<a href="../classes/Symfony.Component.Security.Http.Authentication.AuthenticationSuccessHandlerInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface for a custom authentication success handler</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Authentication.AuthenticationSuccessHandlerInterface.html" class="more">« More »</a>
+</div>
+<div id="DefaultAuthenticationFailureHandler" class="element ajax clickable class">
+<h1>DefaultAuthenticationFailureHandler<a href="../classes/Symfony.Component.Security.Http.Authentication.DefaultAuthenticationFailureHandler.html">¶</a>
+</h1>
+<p class="short_description">Class with the default authentication failure handling logic.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Authentication.DefaultAuthenticationFailureHandler.html" class="more">« More »</a>
+</div>
+<div id="DefaultAuthenticationSuccessHandler" class="element ajax clickable class">
+<h1>DefaultAuthenticationSuccessHandler<a href="../classes/Symfony.Component.Security.Http.Authentication.DefaultAuthenticationSuccessHandler.html">¶</a>
+</h1>
+<p class="short_description">Class with the default authentication success handling logic.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Authentication.DefaultAuthenticationSuccessHandler.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Http.html">Http</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Http.Authorization.html">Authorization</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="AccessDeniedHandlerInterface" class="element ajax clickable interface">
+<h1>AccessDeniedHandlerInterface<a href="../classes/Symfony.Component.Security.Http.Authorization.AccessDeniedHandlerInterface.html">¶</a>
+</h1>
+<p class="short_description">This is used by the ExceptionListener to translate an AccessDeniedException
+to a Response object.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Authorization.AccessDeniedHandlerInterface.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Http.html">Http</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Http.EntryPoint.html">EntryPoint</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="AuthenticationEntryPointInterface" class="element ajax clickable interface">
+<h1>AuthenticationEntryPointInterface<a href="../classes/Symfony.Component.Security.Http.EntryPoint.AuthenticationEntryPointInterface.html">¶</a>
+</h1>
+<p class="short_description">AuthenticationEntryPointInterface is the interface used to start the
+authentication scheme.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.EntryPoint.AuthenticationEntryPointInterface.html" class="more">« More »</a>
+</div>
+<div id="BasicAuthenticationEntryPoint" class="element ajax clickable class">
+<h1>BasicAuthenticationEntryPoint<a href="../classes/Symfony.Component.Security.Http.EntryPoint.BasicAuthenticationEntryPoint.html">¶</a>
+</h1>
+<p class="short_description">BasicAuthenticationEntryPoint starts an HTTP Basic authentication.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.EntryPoint.BasicAuthenticationEntryPoint.html" class="more">« More »</a>
+</div>
+<div id="DigestAuthenticationEntryPoint" class="element ajax clickable class">
+<h1>DigestAuthenticationEntryPoint<a href="../classes/Symfony.Component.Security.Http.EntryPoint.DigestAuthenticationEntryPoint.html">¶</a>
+</h1>
+<p class="short_description">DigestAuthenticationEntryPoint starts an HTTP Digest authentication.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.EntryPoint.DigestAuthenticationEntryPoint.html" class="more">« More »</a>
+</div>
+<div id="FormAuthenticationEntryPoint" class="element ajax clickable class">
+<h1>FormAuthenticationEntryPoint<a href="../classes/Symfony.Component.Security.Http.EntryPoint.FormAuthenticationEntryPoint.html">¶</a>
+</h1>
+<p class="short_description">FormAuthenticationEntryPoint starts an authentication via a login form.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.EntryPoint.FormAuthenticationEntryPoint.html" class="more">« More »</a>
+</div>
+<div id="RetryAuthenticationEntryPoint" class="element ajax clickable class">
+<h1>RetryAuthenticationEntryPoint<a href="../classes/Symfony.Component.Security.Http.EntryPoint.RetryAuthenticationEntryPoint.html">¶</a>
+</h1>
+<p class="short_description">RetryAuthenticationEntryPoint redirects URL based on the configured scheme.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.EntryPoint.RetryAuthenticationEntryPoint.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Http.html">Http</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Http.Event.html">Event</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="InteractiveLoginEvent" class="element ajax clickable class">
+<h1>InteractiveLoginEvent<a href="../classes/Symfony.Component.Security.Http.Event.InteractiveLoginEvent.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Event.InteractiveLoginEvent.html" class="more">« More »</a>
+</div>
+<div id="SwitchUserEvent" class="element ajax clickable class">
+<h1>SwitchUserEvent<a href="../classes/Symfony.Component.Security.Http.Event.SwitchUserEvent.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Event.SwitchUserEvent.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Http.html">Http</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Http.Firewall.html">Firewall</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="ListenerInterface" class="element ajax clickable interface">
+<h1>ListenerInterface<a href="../classes/Symfony.Component.Security.Http.Firewall.ListenerInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface that must be implemented by firewall listeners</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Firewall.ListenerInterface.html" class="more">« More »</a>
+</div>
+<div id="AbstractAuthenticationListener" class="element ajax clickable class">
+<h1>AbstractAuthenticationListener<a href="../classes/Symfony.Component.Security.Http.Firewall.AbstractAuthenticationListener.html">¶</a>
+</h1>
+<p class="short_description">The AbstractAuthenticationListener is the preferred base class for all
+browser-/HTTP-based authentication requests.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Firewall.AbstractAuthenticationListener.html" class="more">« More »</a>
+</div>
+<div id="AbstractPreAuthenticatedListener" class="element ajax clickable class">
+<h1>AbstractPreAuthenticatedListener<a href="../classes/Symfony.Component.Security.Http.Firewall.AbstractPreAuthenticatedListener.html">¶</a>
+</h1>
+<p class="short_description">AbstractPreAuthenticatedListener is the base class for all listener that
+authenticates users based on a pre-authenticated request (like a certificate
+for instance).</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Firewall.AbstractPreAuthenticatedListener.html" class="more">« More »</a>
+</div>
+<div id="AccessListener" class="element ajax clickable class">
+<h1>AccessListener<a href="../classes/Symfony.Component.Security.Http.Firewall.AccessListener.html">¶</a>
+</h1>
+<p class="short_description">AccessListener enforces access control rules.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Firewall.AccessListener.html" class="more">« More »</a>
+</div>
+<div id="AnonymousAuthenticationListener" class="element ajax clickable class">
+<h1>AnonymousAuthenticationListener<a href="../classes/Symfony.Component.Security.Http.Firewall.AnonymousAuthenticationListener.html">¶</a>
+</h1>
+<p class="short_description">AnonymousAuthenticationListener automatically adds a Token if none is
+already present.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Firewall.AnonymousAuthenticationListener.html" class="more">« More »</a>
+</div>
+<div id="BasicAuthenticationListener" class="element ajax clickable class">
+<h1>BasicAuthenticationListener<a href="../classes/Symfony.Component.Security.Http.Firewall.BasicAuthenticationListener.html">¶</a>
+</h1>
+<p class="short_description">BasicAuthenticationListener implements Basic HTTP authentication.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Firewall.BasicAuthenticationListener.html" class="more">« More »</a>
+</div>
+<div id="ChannelListener" class="element ajax clickable class">
+<h1>ChannelListener<a href="../classes/Symfony.Component.Security.Http.Firewall.ChannelListener.html">¶</a>
+</h1>
+<p class="short_description">ChannelListener switches the HTTP protocol based on the access control
+configuration.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Firewall.ChannelListener.html" class="more">« More »</a>
+</div>
+<div id="ContextListener" class="element ajax clickable class">
+<h1>ContextListener<a href="../classes/Symfony.Component.Security.Http.Firewall.ContextListener.html">¶</a>
+</h1>
+<p class="short_description">ContextListener manages the SecurityContext persistence through a session.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Firewall.ContextListener.html" class="more">« More »</a>
+</div>
+<div id="DigestAuthenticationListener" class="element ajax clickable class">
+<h1>DigestAuthenticationListener<a href="../classes/Symfony.Component.Security.Http.Firewall.DigestAuthenticationListener.html">¶</a>
+</h1>
+<p class="short_description">DigestAuthenticationListener implements Digest HTTP authentication.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Firewall.DigestAuthenticationListener.html" class="more">« More »</a>
+</div>
+<div id="DigestData" class="element ajax clickable class">
+<h1>DigestData<a href="../classes/Symfony.Component.Security.Http.Firewall.DigestData.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Firewall.DigestData.html" class="more">« More »</a>
+</div>
+<div id="ExceptionListener" class="element ajax clickable class">
+<h1>ExceptionListener<a href="../classes/Symfony.Component.Security.Http.Firewall.ExceptionListener.html">¶</a>
+</h1>
+<p class="short_description">ExceptionListener catches authentication exception and converts them to
+Response instances.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Firewall.ExceptionListener.html" class="more">« More »</a>
+</div>
+<div id="LogoutListener" class="element ajax clickable class">
+<h1>LogoutListener<a href="../classes/Symfony.Component.Security.Http.Firewall.LogoutListener.html">¶</a>
+</h1>
+<p class="short_description">LogoutListener logout users.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Firewall.LogoutListener.html" class="more">« More »</a>
+</div>
+<div id="RememberMeListener" class="element ajax clickable class">
+<h1>RememberMeListener<a href="../classes/Symfony.Component.Security.Http.Firewall.RememberMeListener.html">¶</a>
+</h1>
+<p class="short_description">RememberMeListener implements authentication capabilities via a cookie</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Firewall.RememberMeListener.html" class="more">« More »</a>
+</div>
+<div id="SwitchUserListener" class="element ajax clickable class">
+<h1>SwitchUserListener<a href="../classes/Symfony.Component.Security.Http.Firewall.SwitchUserListener.html">¶</a>
+</h1>
+<p class="short_description">SwitchUserListener allows a user to impersonate another one temporarily
+(like the Unix su command).</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Firewall.SwitchUserListener.html" class="more">« More »</a>
+</div>
+<div id="UsernamePasswordFormAuthenticationListener" class="element ajax clickable class">
+<h1>UsernamePasswordFormAuthenticationListener<a href="../classes/Symfony.Component.Security.Http.Firewall.UsernamePasswordFormAuthenticationListener.html">¶</a>
+</h1>
+<p class="short_description">UsernamePasswordFormAuthenticationListener is the default implementation of
+an authentication via a simple form composed of a username and a password.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Firewall.UsernamePasswordFormAuthenticationListener.html" class="more">« More »</a>
+</div>
+<div id="X509AuthenticationListener" class="element ajax clickable class">
+<h1>X509AuthenticationListener<a href="../classes/Symfony.Component.Security.Http.Firewall.X509AuthenticationListener.html">¶</a>
+</h1>
+<p class="short_description">X509 authentication listener.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Firewall.X509AuthenticationListener.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Http.html">Http</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Http.Logout.html">Logout</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="LogoutHandlerInterface" class="element ajax clickable interface">
+<h1>LogoutHandlerInterface<a href="../classes/Symfony.Component.Security.Http.Logout.LogoutHandlerInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface that needs to be implemented by LogoutHandlers.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Logout.LogoutHandlerInterface.html" class="more">« More »</a>
+</div>
+<div id="LogoutSuccessHandlerInterface" class="element ajax clickable interface">
+<h1>LogoutSuccessHandlerInterface<a href="../classes/Symfony.Component.Security.Http.Logout.LogoutSuccessHandlerInterface.html">¶</a>
+</h1>
+<p class="short_description">LogoutSuccesshandlerInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Logout.LogoutSuccessHandlerInterface.html" class="more">« More »</a>
+</div>
+<div id="CookieClearingLogoutHandler" class="element ajax clickable class">
+<h1>CookieClearingLogoutHandler<a href="../classes/Symfony.Component.Security.Http.Logout.CookieClearingLogoutHandler.html">¶</a>
+</h1>
+<p class="short_description">This handler clears the passed cookies when a user logs out.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Logout.CookieClearingLogoutHandler.html" class="more">« More »</a>
+</div>
+<div id="DefaultLogoutSuccessHandler" class="element ajax clickable class">
+<h1>DefaultLogoutSuccessHandler<a href="../classes/Symfony.Component.Security.Http.Logout.DefaultLogoutSuccessHandler.html">¶</a>
+</h1>
+<p class="short_description">Default logout success handler will redirect users to a configured path.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Logout.DefaultLogoutSuccessHandler.html" class="more">« More »</a>
+</div>
+<div id="SessionLogoutHandler" class="element ajax clickable class">
+<h1>SessionLogoutHandler<a href="../classes/Symfony.Component.Security.Http.Logout.SessionLogoutHandler.html">¶</a>
+</h1>
+<p class="short_description">Handler for clearing invalidating the current session.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Logout.SessionLogoutHandler.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Http.html">Http</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Http.RememberMe.html">RememberMe</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="RememberMeServicesInterface" class="element ajax clickable interface">
+<h1>RememberMeServicesInterface<a href="../classes/Symfony.Component.Security.Http.RememberMe.RememberMeServicesInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface that needs to be implemented by classes which provide remember-me
+capabilities.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.RememberMe.RememberMeServicesInterface.html" class="more">« More »</a>
+</div>
+<div id="AbstractRememberMeServices" class="element ajax clickable class">
+<h1>AbstractRememberMeServices<a href="../classes/Symfony.Component.Security.Http.RememberMe.AbstractRememberMeServices.html">¶</a>
+</h1>
+<p class="short_description">Base class implementing the RememberMeServicesInterface</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.RememberMe.AbstractRememberMeServices.html" class="more">« More »</a>
+</div>
+<div id="PersistentTokenBasedRememberMeServices" class="element ajax clickable class">
+<h1>PersistentTokenBasedRememberMeServices<a href="../classes/Symfony.Component.Security.Http.RememberMe.PersistentTokenBasedRememberMeServices.html">¶</a>
+</h1>
+<p class="short_description">Concrete implementation of the RememberMeServicesInterface which needs
+an implementation of TokenProviderInterface for providing remember-me
+capabilities.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.RememberMe.PersistentTokenBasedRememberMeServices.html" class="more">« More »</a>
+</div>
+<div id="ResponseListener" class="element ajax clickable class">
+<h1>ResponseListener<a href="../classes/Symfony.Component.Security.Http.RememberMe.ResponseListener.html">¶</a>
+</h1>
+<p class="short_description">Adds remember-me cookies to the Response.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.RememberMe.ResponseListener.html" class="more">« More »</a>
+</div>
+<div id="TokenBasedRememberMeServices" class="element ajax clickable class">
+<h1>TokenBasedRememberMeServices<a href="../classes/Symfony.Component.Security.Http.RememberMe.TokenBasedRememberMeServices.html">¶</a>
+</h1>
+<p class="short_description">Concrete implementation of the RememberMeServicesInterface providing
+remember-me capabilities without requiring a TokenProvider.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.RememberMe.TokenBasedRememberMeServices.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.html">Security</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Http.html">Http</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/Symfony.Component.Security.Http.Session.html">Session</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="SessionAuthenticationStrategyInterface" class="element ajax clickable interface">
+<h1>SessionAuthenticationStrategyInterface<a href="../classes/Symfony.Component.Security.Http.Session.SessionAuthenticationStrategyInterface.html">¶</a>
+</h1>
+<p class="short_description">SessionAuthenticationStrategyInterface</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Session.SessionAuthenticationStrategyInterface.html" class="more">« More »</a>
+</div>
+<div id="SessionAuthenticationStrategy" class="element ajax clickable class">
+<h1>SessionAuthenticationStrategy<a href="../classes/Symfony.Component.Security.Http.Session.SessionAuthenticationStrategy.html">¶</a>
+</h1>
+<p class="short_description">The default session strategy implementation.</p>
+<div class="details collapse"></div>
+<a href="../classes/Symfony.Component.Security.Http.Session.SessionAuthenticationStrategy.html" class="more">« More »</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-11-12T19:25:22Z.<br></footer></div>
+</div>
+</body>
+</html>

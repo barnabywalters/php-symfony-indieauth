@@ -9,5 +9,6 @@
   </transformer>
   <files>
     <directory>BarnabyWalters</directory>
+    <directory>vendor/symfony/security</directory>
   </files>
 </phpdoc>
