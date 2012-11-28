@@ -15,16 +15,8 @@ use Symfony\Component\HttpKernel;
  * @author Barnaby Walters
  * @todo implement all these, and the other tests
  */
-class IndieauthListenerTest extends PHPUnit_Framework_Testcase {
-    public function testRequiresAuthenticationForRequestsWithTokenQueryParam() {
-        // Create mocks
-        $securityContext = $this->getMock('Symfony\Component\Security\Core\SecurityContext');
-        $authManager = $this->getMock('Symfony\Component\Security\Core\Authentication\AuthenticationManager');
-        $sessionStrategy = $this->getMock('Symfony\Component\Security\Http\Session\SessionAuthenticationStrategyInterface');
-        $httpUtils = new Security\Http\HttpUtils;
-        $successHandler = new Security\Http\Authentication\DefaultAuthenticationSuccessHandler($httpUtils, []);
-        $failureHandler = new Security\Http\Authentication\DefaultAuthenticationFailureHandler($kernel, $httpUtils, []);
-    }
+class IndieauthListenerTest extends \PHPUnit_Framework_Testcase {
+    
 }
 
 // EOF
